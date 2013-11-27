@@ -24,6 +24,14 @@ function genesis_portfolio_load_default_styles() {
 
 }
 
+add_filter( 'genesis_post_info', 'genesis_portfolio_post_info_meta_filter', 99 );
+add_filter( 'genesis_post_meta', 'genesis_portfolio_post_info_meta_filter', 99 );
+function genesis_portfolio_post_info_meta_filter($text) {
+
+	return '';
+	
+}
+
 //* Force full width content layout
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
