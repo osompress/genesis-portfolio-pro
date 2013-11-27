@@ -24,13 +24,39 @@ function genesis_portfolio_load_default_styles() {
 
 }
 
-add_filter( 'genesis_post_info', 'genesis_portfolio_post_info_meta_filter', 99 );
+/*add_filter( 'genesis_post_info', 'genesis_portfolio_post_info_meta_filter', 99 );
 add_filter( 'genesis_post_meta', 'genesis_portfolio_post_info_meta_filter', 99 );
 function genesis_portfolio_post_info_meta_filter($text) {
 
 	return '';
 	
+}/**/
+add_action( 'genesis_before_entry', 'genesis_portfolio_remove_post_info_meta' );
+
+/** Replaces Existing Genesis Menu */
+function genesis_portfolio_remove_post_info_meta() {
+
+	$hooks = array( 
+		'genesis_entry_header',
+		'genesis_before_entry_content',
+		'genesis_entry_content',
+		'genesis_after_entry_content',
+		'genesis_entry_footer',
+		'genesis_after_entry',
+	);
+	
+	$actions = array( 
+		'genesis_post_info', 
+		'genesis_post_meta', 
+	);
+	
+	foreach ( $hooks as $hook ) 
+		foreach( $actions as $action )
+			if ( $priority = has_action( $hook, $action ) ) 
+				remove_action( $hook, $action, $priority );
+
 }
+
 
 //* Force full width content layout
 add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
