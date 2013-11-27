@@ -1,0 +1,17 @@
+/* Portfolio
+--------------------------------------------- */
+
+.genesis-pro-portfolio .portfolio {
+    float: left;
+    padding: 0 30px 30px;
+    padding: 0 3rem 3rem;
+    width: 33.33333333%;
+}
+
+.genesis-pro-portfolio .portfolio:nth-of-type(3n+1) {
+    clear: left;
+}
+
+.single-portfolio .content {
+    text-align: center;
+}
