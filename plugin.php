@@ -89,3 +89,30 @@ function genesis_portfolio_rewrite_flush() {
 
     flush_rewrite_rules();
 }
+
+/** Replaces Existing Genesis Menu */
+function genesis_portfolio_remove_actions( $action, $hooks = array() ) {
+	
+	foreach ( $hooks as $hook ) {
+		if ( $priority = has_action( $hook, $action ) ) {
+			remove_action( $hook, $action, $priority );
+		}
+	}
+
+}
+
+/** Replaces Existing Genesis Menu */
+function genesis_portfolio_remove_entry_actions( $action ) {
+
+	$hooks = array( 
+		'genesis_entry_header',
+		'genesis_before_entry_content',
+		'genesis_entry_content',
+		'genesis_after_entry_content',
+		'genesis_entry_footer',
+		'genesis_after_entry',
+	);
+	
+	genesis_portfolio_remove_actions( $action, $hooks );
+
+}
