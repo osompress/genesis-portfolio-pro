@@ -3,9 +3,14 @@
 
 .genesis-pro-portfolio .portfolio {
     float: left;
-    padding: 0 30px 30px;
-    padding: 0 3rem 3rem;
-    width: 33.33333333%;
+    margin-right: 2%;
+    padding: 15px;
+    padding: 1.5rem;
+    width: 32%;
+}
+
+.genesis-pro-portfolio .portfolio:nth-of-type(3n+3) {
+    margin-right: 0;
 }
 
 .genesis-pro-portfolio .portfolio:nth-of-type(3n+1) {
@@ -14,4 +19,8 @@
 
 .single-portfolio .content {
     text-align: center;
+}
+
+.archive-pagination {
+    clear: both;
 }
