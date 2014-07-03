@@ -1,4 +1,4 @@
-<?php
+=<?php
 /**
  * Template Loader
  *
@@ -28,7 +28,7 @@ function genesis_portfolio_get_template_hierarchy( $template ) {
     $template = $template_slug . '.php';
  
     // Check if a custom template exists in the theme folder, if not, load the plugin template file
-    if ( $theme_file = locate_template( array( 'plugin_template/' . $template ) ) ) {
+    if ( $theme_file = locate_template( array( $template ) ) ) {
         $file = $theme_file;
     }
     else {
@@ -55,7 +55,9 @@ function genesis_portfolio_template_chooser( $template ) {
     // Post ID
     $post_id = get_the_ID();
  
-    // Else use custom template
+    if( get_post_type( $post_id ) == 'portfolio' || is_post_type_archive( 'portfolio' ) || is_tax( 'portfolio-type' ) ) {
+	    require_once( GENESIS_PORTFOLIO_LIB . 'functions.php' );
+    }
     if ( is_single() && get_post_type( $post_id ) == 'portfolio' ) {
         return genesis_portfolio_get_template_hierarchy( 'single-portfolio' );
     }
