@@ -46,6 +46,14 @@
 	padding: 0;
 }
 
+.genesis-pro-portfolio .pro-portfolio .entry-header .entry-title {
+	word-wrap: break-word;
+	border: none;
+	font-size: 20px;
+	margin: 20px 0 0;
+	padding: 0;
+}
+
 @media only screen and (max-width: 780px) {
 
 	.genesis-pro-portfolio .pro-portfolio {

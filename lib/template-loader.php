@@ -57,6 +57,7 @@ function genesis_portfolio_template_chooser( $template ) {
  
     if( get_post_type( $post_id ) == 'portfolio' || is_post_type_archive( 'portfolio' ) || is_tax( 'portfolio-type' ) ) {
 	    require_once( GENESIS_PORTFOLIO_LIB . 'functions.php' );
+	    add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
     }
     if ( is_single() && get_post_type( $post_id ) == 'portfolio' ) {
         return genesis_portfolio_get_template_hierarchy( 'single-portfolio' );
