@@ -55,6 +55,55 @@
 	padding: 0;
 }
 
+.genesis-pro-portfolio .entry-header .entry-meta {
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0;
+    padding: 5px;
+    text-transform: none;
+}
+
+.genesis-pro-portfolio .content .entry-header .entry-meta .entry-comments-link {
+    display: block;
+    float: none;
+    margin-top: 5px;
+    padding-bottom: 0;
+}
+
+.genesis-pro-portfolio .entry-author,
+.genesis-pro-portfolio .entry-comments-link,
+.genesis-pro-portfolio .entry-time {
+    border-width: 0;
+    float: none;
+    margin: 0;
+    width: auto;
+}
+
+.genesis-pro-portfolio .entry-author:before,
+.genesis-pro-portfolio .entry-comments-link:before,
+.entry-time:before {
+    content: "";
+}
+
+.genesis-pro-portfolio .pro-portfolio .entry-header .entry-title {
+    margin: 20px 0 10px;
+}
+
+.genesis-pro-portfolio .entry-header .entry-meta {
+    line-height: 1.6;
+}
+
+.genesis-pro-portfolio .entry-comments-link:before {
+    margin: 0;
+}
+
+.genesis-pro-portfolio .content .entry-header .entry-meta .entry-comments-link a {
+    background-image: none;
+    display: block;
+    padding: 5px 8px;
+    position: static;
+}
+
 @media only screen and (max-width: 780px) {
 
 	.genesis-pro-portfolio .pro-portfolio {
