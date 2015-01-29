@@ -94,7 +94,7 @@
 }
 
 .genesis-pro-portfolio .entry-comments-link:before {
-    margin: 0;
+    display: none;
 }
 
 .genesis-pro-portfolio .content .entry-header .entry-meta .entry-comments-link a {
