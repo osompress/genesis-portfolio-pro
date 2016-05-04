@@ -70,14 +70,14 @@ register_post_type( 'portfolio',
 	)
 );
 
-add_filter( 'manage_taxonomies_for_portfolio_columns', 'portfolio_columns' );
+add_filter( 'manage_taxonomies_for_portfolio_columns', 'genesis_portfolio_columns' );
 /**
  * Add Portfolio Type Taxonomy to columns
  *
  * @since 0.1.0
  *
  */
-function portfolio_columns( $taxonomies ) {
+function genesis_portfolio_columns( $taxonomies ) {
 
     $taxonomies[] = 'portfolio-type';
     return $taxonomies;
