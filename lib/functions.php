@@ -56,10 +56,27 @@ function genesis_portfolio_custom_post_class( $classes ) {
   return $classes;
 }
 
+/**
+ * Callback on the `genesis_portfolio_grid` action.
+ * Verifies there is an image attached to the portfolio item
+ * then outputs the HTML for the image with classes for styling.
+ * 
+ * @uses genesis_get_image()
+ * 
+ * @access public
+ * @return void
+ */
 function genesis_portfolio_grid() {
+	
+	$image = genesis_get_image( array(
+		'format'  => 'html',
+		'size'    => 'portfolio',
+		'context' => 'archive',
+		'attr'    => array ( 'alt' => the_title_attribute( 'echo=0', 'class' => 'portfolio-image' ) ),
+	) );
 
-    if ( $image = genesis_get_image( 'format=url&size=portfolio' ) ) {
-        printf( '<div class="portfolio-featured-image"><a href="%s" rel="bookmark"><img src="%s" alt="%s" /></a></div>', get_permalink(), $image, the_title_attribute( 'echo=0' ) );
+    if ( $image ) {
+        printf( '<div class="portfolio-featured-image"><a href="%s" rel="bookmark"></a></div>', get_permalink(), $image );
 
     }
 
