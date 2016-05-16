@@ -106,7 +106,7 @@ function genesis_portfolio_grid() {
 		) );
 
 	if ( $image ) {
-		printf( '<div class="portfolio-featured-image"><a href="%s" rel="bookmark"></a></div>', get_permalink(), $image );
+		printf( '<div class="portfolio-featured-image"><a href="%s" rel="bookmark">%s</a></div>', get_permalink(), $image );
 	}
 
 }
