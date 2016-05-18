@@ -9,7 +9,7 @@
  * @author  StudioPress
  * @license GPL-2.0+
  */
- 
+
 //registers "portfolio-type" taxonomy for the portfolio post type
 register_taxonomy( 'portfolio-type', 'portfolio',
 	array(
@@ -34,7 +34,7 @@ register_taxonomy( 'portfolio-type', 'portfolio',
 		'exclude_from_search' => true,
 		'has_archive'         => true,
 		'hierarchical'        => true,
-		'rewrite'             => array( 'slug' => 'portfolio-type', 'with_front' => false ),
+		'rewrite'             => array( 'slug' => _x( 'portfolio-type', 'portfolio-type slug' , 'genesis-portfolio-pro' ), 'with_front' => false ),
 		'show_ui'             => true,
 		'show_tagcloud'       => false,
 	)
@@ -44,26 +44,26 @@ register_taxonomy( 'portfolio-type', 'portfolio',
 register_post_type( 'portfolio',
 	array(
 		'labels' => array(
-			'name'               => _x( 'Portfolio Items', 'post type general name' , 'genesis-Portfolio Item-pro' ),
-			'singular_name'      => _x( 'Portfolio Item' , 'post type singular name', 'genesis-Portfolio Item-pro' ),
-			'menu_name'          => _x( 'Portfolio Items', 'admin menu'             , 'genesis-Portfolio Item-pro' ),
-			'name_admin_bar'     => _x( 'Portfolio Item' , 'add new on admin bar'   , 'genesis-Portfolio Item-pro' ),
-			'add_new'            => _x( 'Add New'   , 'Portfolio Item'              , 'genesis-Portfolio Item-pro' ),
-			'add_new_item'       => __( 'Add New Portfolio Item'                    , 'genesis-Portfolio Item-pro' ),
-			'new_item'           => __( 'New Portfolio Item'                        , 'genesis-Portfolio Item-pro' ),
-			'edit_item'          => __( 'Edit Portfolio Item'                       , 'genesis-Portfolio Item-pro' ),
-			'view_item'          => __( 'View Portfolio Item'                       , 'genesis-Portfolio Item-pro' ),
-			'all_items'          => __( 'All Portfolio Items'                       , 'genesis-Portfolio Item-pro' ),
-			'search_items'       => __( 'Search Portfolio Items'                    , 'genesis-Portfolio Item-pro' ),
-			'parent_item_colon'  => __( 'Parent Portfolio Items:'                   , 'genesis-Portfolio Item-pro' ),
-			'not_found'          => __( 'No Portfolio Items found.'                 , 'genesis-Portfolio Item-pro' ),
-			'not_found_in_trash' => __( 'No Portfolio Items found in Trash.'        , 'genesis-Portfolio Item-pro' )
+			'name'               => _x( 'Portfolio Items', 'post type general name' , 'genesis-portfolio-pro' ),
+			'singular_name'      => _x( 'Portfolio Item' , 'post type singular name', 'genesis-portfolio-pro' ),
+			'menu_name'          => _x( 'Portfolio Items', 'admin menu'             , 'genesis-portfolio-pro' ),
+			'name_admin_bar'     => _x( 'Portfolio Item' , 'add new on admin bar'   , 'genesis-portfolio-pro' ),
+			'add_new'            => _x( 'Add New'   , 'Portfolio Item'              , 'genesis-portfolio-pro' ),
+			'add_new_item'       => __( 'Add New Portfolio Item'                    , 'genesis-portfolio-pro' ),
+			'new_item'           => __( 'New Portfolio Item'                        , 'genesis-portfolio-pro' ),
+			'edit_item'          => __( 'Edit Portfolio Item'                       , 'genesis-portfolio-pro' ),
+			'view_item'          => __( 'View Portfolio Item'                       , 'genesis-portfolio-pro' ),
+			'all_items'          => __( 'All Portfolio Items'                       , 'genesis-portfolio-pro' ),
+			'search_items'       => __( 'Search Portfolio Items'                    , 'genesis-portfolio-pro' ),
+			'parent_item_colon'  => __( 'Parent Portfolio Items:'                   , 'genesis-portfolio-pro' ),
+			'not_found'          => __( 'No Portfolio Items found.'                 , 'genesis-portfolio-pro' ),
+			'not_found_in_trash' => __( 'No Portfolio Items found in Trash.'        , 'genesis-portfolio-pro' )
 		),
 		'has_archive'  => true,
 		'hierarchical' => true,
 		'menu_icon'    => 'dashicons-format-gallery',
 		'public'       => true,
-		'rewrite'      => array( 'slug' => 'portfolio', 'with_front' => false ),
+		'rewrite'      => array( 'slug' => _x( 'portfolio', 'portfolio slug' , 'genesis-portfolio-pro' ), 'with_front' => false ),
 		'supports'     => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'revisions', 'page-attributes', 'genesis-seo', 'genesis-cpt-archives-settings' ),
 		'taxonomies'   => array( 'portfolio-type' ),
 
@@ -79,7 +79,7 @@ add_filter( 'manage_taxonomies_for_portfolio_columns', 'genesis_portfolio_column
  */
 function genesis_portfolio_columns( $taxonomies ) {
 
-    $taxonomies[] = 'portfolio-type';
-    return $taxonomies;
+	$taxonomies[] = 'portfolio-type';
+	return $taxonomies;
 
 }

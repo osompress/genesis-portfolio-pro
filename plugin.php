@@ -6,12 +6,31 @@
   Version: 1.0.0
   Author: copyblogger
   Author URI: http://www.copyblogger.com
+  Text Domain: genesis-portfolio-pro
+  Domain Path: /languages
 
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( "Sorry, you are not allowed to access this page directly." );
 }
+
+add_action( 'plugins_loaded', 'genesis_portfolio_load_plugin_textdomain' );
+
+/**
+ * Callback on the `plugins_loaded` hook.
+ * Loads the plugin text domain via load_plugin_textdomain()
+ *
+ * @uses load_plugin_textdomain()
+ * @since 1.0.0
+ * 
+ * @access public
+ * @return void
+ */
+function genesis_portfolio_load_plugin_textdomain() {
+    load_plugin_textdomain( 'genesis-portfolio-pro', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+}
+
 
 define( 'GENESIS_PORTFOLIO_LIB', dirname( __FILE__ ) . '/lib/' );
 define( 'GENESIS_PORTFOLIO_URL', plugins_url( '/', __FILE__ ) );
