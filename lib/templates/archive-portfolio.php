@@ -18,7 +18,7 @@ add_filter( 'genesis_site_layout', 'genesis_portfolio_archive_template_layout' )
  */
 function genesis_portfolio_archive_template_layout( $layout ) {
 
-	$archive_opts = get_option( 'genesis-cpt-archive-settings-podcast' );
+	$archive_opts = get_option( 'genesis-cpt-archive-settings-portfolio' );
 	$layout       = empty( $archive_opts['layout'] ) ? __genesis_return_full_width_content() : $archive_opts['layout'];
 
 	return $layout;
