@@ -2,12 +2,12 @@
 Contributors: nathanrice, studiopress, wpmuguru, nick_thegeek, bgardner
 Tags: genesis, portfolio, templates
 Requires at least: 3.7
-Tested up to: 4.5.2
-Stable tag: 1.0.0
+Tested up to: 4.7.4
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Genesis Portfolio Pro adds a portfolio post type and related taxonomies along with custom templates to allow for styled portfolios for any Genesis HTML5 theme.
+Genesis Portfolio Pro adds all you need to allow for styled portfolios for any Genesis HTML5 theme.
 
 == Description ==
 
@@ -29,6 +29,9 @@ Custom templates are supported using the WordPress template hierarchy and the po
 
 
 == Changelog ==
+
+= 1.0.1 =
+* Bug fix for search layout.
 
 = 1.0 =
 * Initial WordPress.org release.
