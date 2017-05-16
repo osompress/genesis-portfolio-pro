@@ -67,7 +67,7 @@ function genesis_portfolio_template_chooser( $template ) {
 	// Post ID
 	$post_id = get_the_ID();
 
-	if ( get_post_type( $post_id ) == 'portfolio' || is_post_type_archive( 'portfolio' ) || is_tax( 'portfolio-type' ) ) {
+	if ( ! is_search() && get_post_type( $post_id ) == 'portfolio' || is_post_type_archive( 'portfolio' ) || is_tax( 'portfolio-type' ) ) {
 		require_once( GENESIS_PORTFOLIO_LIB . 'functions.php' );
 	}
 	if ( is_single() && get_post_type( $post_id ) == 'portfolio' ) {
