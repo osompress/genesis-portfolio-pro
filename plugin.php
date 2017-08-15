@@ -33,7 +33,7 @@ function genesis_portfolio_load_plugin_textdomain() {
 
 
 define( 'GENESIS_PORTFOLIO_LIB', dirname( __FILE__ ) . '/lib/' );
-define( 'GENESIS_PORTFOLIO_URL', plugins_url( '/', __FILE__ ) );
+define( 'GENESIS_PORTFOLIO_URL', plugins_url( '/', __FILE__ )  );
 
 add_action( 'genesis_init', 'genesis_portfolio_init' );
 /**
@@ -85,7 +85,7 @@ function genesis_portfolio_load_admin_styles() {
  * @since 0.1.0
  *
  */
-function genesis_portfolio_after_setup_theme(){
+function genesis_portfolio_after_setup_theme() {
 
 	global $_wp_additional_image_sizes;
 
