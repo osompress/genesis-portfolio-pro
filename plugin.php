@@ -231,7 +231,7 @@ function genesis_portfolio_archive_pre_get_posts( $query ) {
 		return;
 	}
 
-	if ( ! $query->is_archive( 'portfolio' ) && ! $query->is_tax( 'portfolio-type' ) ) {
+	if ( ! $query->is_post_type_archive( 'portfolio' ) && ! $query->is_tax( 'portfolio-type' ) ) {
 		return;
 	}
 
