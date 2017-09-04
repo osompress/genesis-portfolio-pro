@@ -3,9 +3,9 @@
   Plugin Name: Genesis Portfolio Pro
   Plugin URI:
   Description: Adds default portfolio to any Genesis HTML5 theme.
-  Version: 1.0.1
-  Author: copyblogger
-  Author URI: http://www.copyblogger.com
+  Version: 1.1
+  Author: StudioPress
+  Author URI: http://www.studiopress.com
   Text Domain: genesis-portfolio-pro
   Domain Path: /languages
 
@@ -23,17 +23,37 @@ add_action( 'plugins_loaded', 'genesis_portfolio_load_plugin_textdomain' );
  *
  * @uses load_plugin_textdomain()
  * @since 1.0.0
- * 
+ *
  * @access public
  * @return void
  */
 function genesis_portfolio_load_plugin_textdomain() {
-    load_plugin_textdomain( 'genesis-portfolio-pro', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+	load_plugin_textdomain( 'genesis-portfolio-pro', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 
-
 define( 'GENESIS_PORTFOLIO_LIB', dirname( __FILE__ ) . '/lib/' );
-define( 'GENESIS_PORTFOLIO_URL', plugins_url( '/', __FILE__ ) );
+define( 'GENESIS_PORTFOLIO_URL', plugins_url( '/', __FILE__ )  );
+
+spl_autoload_register( 'genesis_portfolio_autoload' );
+/**
+ * Callback for the `spl_autoload_register` function.
+ * Requires class files for specified classes.
+ *
+ * @access public
+ * @param  string $class
+ * @return void
+ */
+function genesis_portfolio_autoload( $class ) {
+
+	$classes = array(
+		'Genesis_Portolio_Archive_Settings',
+	);
+
+	if ( in_array( $class, $classes ) ) {
+		require sprintf( '%s/classes/class.%s.php', GENESIS_PORTFOLIO_LIB, $class );
+	}
+
+}
 
 add_action( 'genesis_init', 'genesis_portfolio_init' );
 /**
@@ -56,7 +76,12 @@ function genesis_portfolio_init() {
 		require_once( GENESIS_PORTFOLIO_LIB . 'template-loader.php' );
 	}
 
-	add_action( 'after_setup_theme', 'genesis_portfolio_after_setup_theme' );
+	//archive settings
+	add_action( 'genesis_cpt_archives_settings_metaboxes', array( 'Genesis_Portolio_Archive_Settings', 'register_metaboxes' ) );
+
+	add_action( 'genesis_settings_sanitizer_init'      , 'genesis_portfolio_archive_setting_sanitization'        );
+	add_action( 'genesis_cpt_archive_settings_defaults', 'genesis_portfolio_archive_setting_defaults'    , 10, 2 );
+	add_action( 'after_setup_theme'                    , 'genesis_portfolio_after_setup_theme'                   );
 
 }
 
@@ -85,13 +110,53 @@ function genesis_portfolio_load_admin_styles() {
  * @since 0.1.0
  *
  */
-function genesis_portfolio_after_setup_theme(){
+function genesis_portfolio_after_setup_theme() {
 
 	global $_wp_additional_image_sizes;
 
 	if ( ! isset( $_wp_additional_image_sizes['portfolio'] ) ) {
 		add_image_size( 'portfolio', 300, 200, TRUE );
 	}
+
+}
+
+/**
+ * Callback on the `genesis_settings_sanitizer_init` hook.
+ * Registers the sanitize method for the posts_per_page archive setting option
+ *
+ * @access public
+ * @static
+ * @return void
+ */
+function genesis_portfolio_archive_setting_sanitization() {
+
+	genesis_add_option_filter(
+		'absint',
+		GENESIS_CPT_ARCHIVE_SETTINGS_FIELD_PREFIX . 'portfolio',
+		array(
+			'posts_per_page',
+		)
+	);
+
+}
+
+/**
+ * Callback on the `genesis_cpt_archive_settings_defaults` filter.
+ * Adds the archive setting for pagination
+ *
+ * @access public
+ * @param  array  $defaults
+ * @param  string $post_type
+ * @return array
+ */
+function genesis_portfolio_archive_setting_defaults( $defaults = array(), $post_type ) {
+
+	if ( 'portfolio' === $post_type ) {
+		$defaults                   = (array) $defaults;
+		$defaults['posts_per_page'] = get_option( 'posts_per_page' );
+	}
+
+	return $defaults;
 
 }
 
@@ -148,5 +213,34 @@ function genesis_portfolio_remove_entry_actions( $action ) {
 	);
 
 	genesis_portfolio_remove_actions( $action, $hooks );
+
+}
+
+add_filter( 'pre_get_posts', 'genesis_portfolio_archive_pre_get_posts', 999 );
+/**
+ * Callback on the pre_get_posts hook.
+ * Changes the posts per page setting for portfolio and portfolio-type archives if set.
+ *
+ * @access public
+ * @param  obj $query
+ * @return void
+ */
+function genesis_portfolio_archive_pre_get_posts( $query ) {
+
+	if ( ! $query->is_main_query() ) {
+		return;
+	}
+
+	if ( ! $query->is_post_type_archive( 'portfolio' ) && ! $query->is_tax( 'portfolio-type' ) ) {
+		return;
+	}
+
+	$opts = (array) get_option( GENESIS_CPT_ARCHIVE_SETTINGS_FIELD_PREFIX . 'portfolio' );
+
+	if ( empty( $opts['posts_per_page'] ) ) {
+		return;
+	}
+
+	$query->set( 'posts_per_page', intval( $opts['posts_per_page'] ) );
 
 }
