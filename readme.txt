@@ -1,9 +1,9 @@
 === Genesis Portfolio Pro ===
 Contributors: nathanrice, studiopress, wpmuguru, nick_thegeek, bgardner
 Tags: genesis, portfolio, templates
-Requires at least: 3.7
-Tested up to: 4.7.4
-Stable tag: 1.0.1
+Requires at least: 4.4
+Tested up to: 4.8.1
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,10 @@ Custom templates are supported using the WordPress template hierarchy and the po
 
 == Changelog ==
 
+= 1.1 =
+* Added Feature items per page in portfolio archive settings
+* Fix layout setting for portfolio-type term
+
 = 1.0.1 =
 * Bug fix for search layout.
 
@@ -37,6 +41,10 @@ Custom templates are supported using the WordPress template hierarchy and the po
 * Initial WordPress.org release.
 
 == Upgrade Notice ==
+
+= 1.1 =
+
+Portfolio-Type term meta layout setting now working. If this was changed for a term it will take effect on upgrade. Users should check their portfolio-type archives to ensure the desired layout is displayed.
 
 = 1.0 =
 Plugin was added to the WordPress.org repo. Users should update to ensure they have the latest code.
