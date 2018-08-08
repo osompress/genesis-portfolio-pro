@@ -2,3 +2,5 @@
 Thumbs.db
 .svn
 node_modules/
+vendor/
+build/
