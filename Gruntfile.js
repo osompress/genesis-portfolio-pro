@@ -20,7 +20,7 @@ module.exports = function(grunt) {
           }]
         },
         files: [
-          { src: ['<%= pkg.name %>.php'], dest: './'}
+          { src: ['<%= pkg.main_plugin_file %>.php'], dest: './'}
 				]
       }
     },
@@ -87,5 +87,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-wptools');
 
   grunt.registerTask('default', ['phpcs']);
-  grunt.registerTask('build', ['wptools', 'replace:pluginfile', 'copy:main', 'compress:main'])
+  grunt.registerTask('build', [/*'wptools'*/ 'replace:pluginfile', 'copy:main', 'compress:main'])
 };
