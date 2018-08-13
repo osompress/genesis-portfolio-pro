@@ -46,7 +46,7 @@ spl_autoload_register( 'genesis_portfolio_autoload' );
 function genesis_portfolio_autoload( $class ) {
 
 	$classes = array(
-		'Genesis_Portolio_Archive_Settings',
+		'Genesis_Portfolio_Archive_Settings',
 	);
 
 	if ( in_array( $class, $classes ) ) {
@@ -77,7 +77,7 @@ function genesis_portfolio_init() {
 	}
 
 	//archive settings
-	add_action( 'genesis_cpt_archives_settings_metaboxes', array( 'Genesis_Portolio_Archive_Settings', 'register_metaboxes' ) );
+	add_action( 'genesis_cpt_archives_settings_metaboxes', array( 'Genesis_Portfolio_Archive_Settings', 'register_metaboxes' ) );
 
 	add_action( 'genesis_settings_sanitizer_init'      , 'genesis_portfolio_archive_setting_sanitization'        );
 	add_action( 'genesis_cpt_archive_settings_defaults', 'genesis_portfolio_archive_setting_defaults'    , 10, 2 );
