@@ -31,7 +31,7 @@ class Genesis_Portfolio_Widget extends WP_Widget {
 		$this->defaults = array(
 			'title'             => '',
 
-			'items_num'         => '',
+			'items_num'         => 3,
 			'portfolio_type'    => '',
 			'show_type'         => 0,
 			'orderby'           => '',

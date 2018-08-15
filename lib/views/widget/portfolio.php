@@ -26,7 +26,7 @@ if ( ! empty( $instance['show_view_all'] ) && 'top' === $instance['view_all_posi
 $portfolio_query_args = array(
 	'post_type' => 'portfolio',
 	'cat'       => $instance['posts_cat'],
-	'showposts' => $instance['posts_num'],
+	'showposts' => $instance['items_num'],
 	'orderby'   => $instance['orderby'],
 	'order'     => $instance['order'],
 );
