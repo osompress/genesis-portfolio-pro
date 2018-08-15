@@ -47,6 +47,7 @@ spl_autoload_register( 'genesis_portfolio_autoload' );
 function genesis_portfolio_autoload( $class ) {
 	$classes = array(
 		'Genesis_Portfolio_Archive_Settings',
+		'Genesis_Portfolio_Widget',
 	);
 
 	if ( in_array( $class, $classes ) ) {
