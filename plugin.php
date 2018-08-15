@@ -1,15 +1,16 @@
 <?php
-/*
-  Plugin Name: Genesis Portfolio Pro
-  Plugin URI:
-  Description: Adds default portfolio to any Genesis HTML5 theme.
-  Version: 1.1
-  Author: StudioPress
-  Author URI: http://www.studiopress.com
-  Text Domain: genesis-portfolio-pro
-  Domain Path: /languages
-
-*/
+/**
+ * Plugin Name: Genesis Portfolio Pro
+ * Plugin URI:
+ * Description: Adds default portfolio to any Genesis HTML5 theme.
+ * Version: 1.1
+ * Author: StudioPress
+ * Author URI: http://www.studiopress.com
+ * Text Domain: genesis-portfolio-pro
+ * Domain Path: /languages
+ *
+ * @package Genesis Portfolio Pro
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Sorry, you are not allowed to access this page directly.' );
@@ -41,7 +42,7 @@ spl_autoload_register( 'genesis_portfolio_autoload' );
  * Requires class files for specified classes.
  *
  * @access public
- * @param  string $class
+ * @param  string $class The requested class.
  * @return void
  */
 function genesis_portfolio_autoload( $class ) {
@@ -50,7 +51,7 @@ function genesis_portfolio_autoload( $class ) {
 		'Genesis_Portfolio_Widget',
 	);
 
-	if ( in_array( $class, $classes ) ) {
+	if ( in_array( $class, $classes, true ) ) {
 		$name = strtolower( str_replace( '_', '-', $class ) );
 		include sprintf( '%s/classes/class-%s.php', GENESIS_PORTFOLIO_LIB, $name );
 	}
@@ -75,7 +76,7 @@ function genesis_portfolio_init() {
 		include_once GENESIS_PORTFOLIO_LIB . 'template-loader.php';
 	}
 
-	// archive settings
+	// Archive settings.
 	add_action( 'genesis_cpt_archives_settings_metaboxes', array( 'Genesis_Portfolio_Archive_Settings', 'register_metaboxes' ) );
 
 	add_action( 'genesis_settings_sanitizer_init', 'genesis_portfolio_archive_setting_sanitization' );
@@ -141,8 +142,8 @@ function genesis_portfolio_archive_setting_sanitization() {
  * Adds the archive setting for pagination
  *
  * @access public
- * @param  array  $defaults
- * @param  string $post_type
+ * @param  array  $defaults  Settings defaults.
+ * @param  string $post_type The post type to filter settings for.
  * @return array
  */
 function genesis_portfolio_archive_setting_defaults( $defaults = array(), $post_type ) {
@@ -183,13 +184,14 @@ function genesis_portfolio_widgets_init() {
  * Removes all actions for the provided hooks by cycling through the hooks and getting the priority so the action is removed correctly.
  *
  * @access public
- * @param  string $action
- * @param  array  $hooks  (default: array())
+ * @param  string $action The action to remove hooks from.
+ * @param  array  $hooks  (default: array()) The hooks to remove.
  * @return void
  */
 function genesis_portfolio_remove_actions( $action, $hooks = array() ) {
 	foreach ( $hooks as $hook ) {
-		if ( $priority = has_action( $hook, $action ) ) {
+		$priority = has_action( $hook, $action );
+		if ( $priority ) {
 			remove_action( $hook, $action, $priority );
 		}
 	}
@@ -200,7 +202,7 @@ function genesis_portfolio_remove_actions( $action, $hooks = array() ) {
  * Removes the specified action from the standard entry hooks.
  *
  * @access public
- * @param  string $action
+ * @param  string $action The action to remove.
  * @return void
  */
 function genesis_portfolio_remove_entry_actions( $action ) {
@@ -223,7 +225,7 @@ add_filter( 'pre_get_posts', 'genesis_portfolio_archive_pre_get_posts', 999 );
  * Changes the posts per page setting for portfolio and portfolio-type archives if set.
  *
  * @access public
- * @param  obj $query
+ * @param  obj $query The query to adjust.
  * @return void
  */
 function genesis_portfolio_archive_pre_get_posts( $query ) {

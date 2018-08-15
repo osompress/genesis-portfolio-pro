@@ -1,17 +1,19 @@
 <?php
 /**
  * Front-end View: Portfolio widget.
+ * Included via lib/classes/class-genesis-portfolio-widget.php.
  *
  * @package Genesis Portfolio Pro
  * @since   1.2.0
  */
 
-// phpcs:disable WordPress.WP.GlobalVariableOverride - mirrors Genesis Featured Post widget usage.
 defined( 'ABSPATH' ) || exit;
 
+// phpcs:ignore
 echo $args['before_widget'];
 
 if ( ! empty( $instance['title'] ) ) {
+	// phpcs:ignore
 	echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'], $instance, $this->id_base ) . $args['after_title'];
 }
 
@@ -31,6 +33,7 @@ $portfolio_query_args = array(
 );
 
 if ( ! empty( $instance['portfolio_type'] ) ) {
+	// phpcs:ignore
 	$portfolio_query_args['tax_query'] = array(
 		array(
 			'taxonomy' => 'portfolio-type',
@@ -39,13 +42,13 @@ if ( ! empty( $instance['portfolio_type'] ) ) {
 	);
 }
 
-$wp_query = new WP_Query( $portfolio_query_args );
+$portfolio_query = new WP_Query( $portfolio_query_args );
 
-if ( have_posts() ) {
+if ( $portfolio_query->have_posts() ) {
 
-	while ( have_posts() ) {
+	while ( $portfolio_query->have_posts() ) {
 
-		the_post();
+		$portfolio_query->the_post();
 
 		genesis_markup(
 			array(
@@ -72,7 +75,8 @@ if ( have_posts() ) {
 
 		if ( $image && $instance['show_image'] ) {
 			$role = empty( $instance['show_title'] ) ? '' : 'aria-hidden="true"';
-			printf( '<a href="%s" class="%s" %s>%s</a>', get_permalink(), esc_attr( $instance['image_alignment'] ), $role, wp_make_content_images_responsive( $image ) );
+			// phpcs:ignore
+			printf( '<a href="%s" class="%s" %s>%s</a>', esc_url( get_permalink() ), esc_attr( $instance['image_alignment'] ), $role, wp_make_content_images_responsive( $image ) );
 		}
 
 		if ( $instance['show_title'] || $instance['show_byline'] ) {
@@ -146,19 +150,12 @@ if ( have_posts() ) {
 				)
 			);
 
-			if ( 'excerpt' == $instance['show_content'] ) {
+			if ( 'excerpt' === $instance['show_content'] ) {
 				the_excerpt();
-			} elseif ( 'content-limit' == $instance['show_content'] ) {
+			} elseif ( 'content-limit' === $instance['show_content'] ) {
 				the_content_limit( (int) $instance['content_limit'], genesis_a11y_more_link( esc_html( $instance['more_text'] ) ) );
 			} else {
-				global $more;
-
-				$orig_more = $more;
-				$more      = 0;
-
 				the_content( genesis_a11y_more_link( esc_html( $instance['more_text'] ) ) );
-
-				$more = $orig_more;
 			}
 
 			genesis_markup(
@@ -186,7 +183,7 @@ if ( have_posts() ) {
 	}
 }
 
-wp_reset_query();
+wp_reset_postdata();
 
 if ( ! empty( $instance['show_view_all'] ) && 'bottom' === $instance['view_all_position'] ) {
 	printf(
@@ -196,4 +193,5 @@ if ( ! empty( $instance['show_view_all'] ) && 'bottom' === $instance['view_all_p
 	);
 }
 
+// phpcs:ignore
 echo $args['after_widget'];

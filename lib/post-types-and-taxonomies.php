@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Post Type and Taxonomies
  *
@@ -82,6 +81,7 @@ add_filter( 'manage_taxonomies_for_portfolio_columns', 'genesis_portfolio_column
 /**
  * Add Portfolio Type Taxonomy to columns
  *
+ * @param array $taxonomies The list of taxonomies.
  * @since 0.1.0
  */
 function genesis_portfolio_columns( $taxonomies ) {

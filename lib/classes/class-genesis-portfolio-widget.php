@@ -71,15 +71,10 @@ class Genesis_Portfolio_Widget extends WP_Widget {
 	 *
 	 * @since 1.2.0
 	 *
-	 * @global WP_Query $wp_query Query object.
-	 * @global integer  $more
-	 *
 	 * @param array $args     Display arguments including before_title, after_title, before_widget, and after_widget.
 	 * @param array $instance The settings for the particular instance of the widget.
 	 */
 	public function widget( $args, $instance ) {
-
-		global $wp_query, $more;
 
 		// Merge with defaults.
 		$instance = wp_parse_args( (array) $instance, $this->defaults );

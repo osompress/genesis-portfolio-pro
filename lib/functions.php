@@ -1,8 +1,13 @@
 <?php
-
+/**
+ * Global `genesis_portfolio_` functions.
+ *
+ * @author     StudioPress
+ * @package    Genesis Portfolio Pro
+ */
 
 /**
- * Loads the default.css file via wp_enqueue_style
+ * Loads the default.css file via wp_enqueue_style.
  * unless the `genesis_portfolio_load_default_styles` is set to a falsie value.
  *
  * @access public
@@ -29,7 +34,7 @@ function genesis_portfolio_load_default_styles() {
 }
 
 /**
- * Remove actions on before entry and setup the portfolio entry actions
+ * Remove actions on before entry and setup the portfolio entry actions.
  */
 function genesis_portfolio_setup_loop() {
 	$hooks = array(
@@ -58,7 +63,7 @@ function genesis_portfolio_setup_loop() {
  * Adds the `genesis-por-portfolio` body class on portfolio archive and single pages.
  *
  * @access public
- * @param  array $classes
+ * @param  array $classes The current body classes.
  * @return array
  */
 function genesis_portfolio_add_body_class( $classes ) {
@@ -72,7 +77,7 @@ function genesis_portfolio_add_body_class( $classes ) {
  * Adds the pro-portfolio class to the main query on portfolio archive and single views
  *
  * @access public
- * @param  array $classes
+ * @param  array $classes The current post classes.
  * @return array
  */
 function genesis_portfolio_custom_post_class( $classes ) {
@@ -105,9 +110,13 @@ function genesis_portfolio_grid() {
 			),
 		)
 	);
-
 	if ( $image ) {
-		printf( '<div class="portfolio-featured-image"><a href="%s" rel="bookmark">%s</a></div>', get_permalink(), $image );
+		printf(
+			'<div class="portfolio-featured-image"><a href="%s" rel="bookmark">%s</a></div>',
+			esc_url( get_permalink() ),
+			// phpcs:ignore
+			$image
+		);
 	}
 
 }
