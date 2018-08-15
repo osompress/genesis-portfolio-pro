@@ -1,5 +1,13 @@
 <?php
 /**
+ * The Portfolio Archive Settings.
+ *
+ * @author  StudioPress
+ * @package Genesis Portfolio Pro
+ * @since   1.2.0
+ */
+
+/**
  * Portfolio Archive Settings.
  *
  * @author     StudioPress
@@ -7,8 +15,12 @@
  */
 class Genesis_Portfolio_Archive_Settings {
 
-
-	var $settings_field;
+	/**
+	 * Widget settings name.
+	 *
+	 * @var string
+	 */
+	public $settings_field;
 
 	/**
 	 * Callback on the `genesis_cpt_archives_settings_metaboxes` action.
@@ -16,8 +28,7 @@ class Genesis_Portfolio_Archive_Settings {
 	 *
 	 * @access public
 	 * @static
-	 * @param  string $pagehook
-	 * @return void
+	 * @param  string $pagehook Page hook for the CPT archive settings page.
 	 */
 	public static function register_metaboxes( $pagehook ) {
 
@@ -33,7 +44,7 @@ class Genesis_Portfolio_Archive_Settings {
 	 * Builds the HTML output for the portfolio archive settings.
 	 *
 	 * @access public
-	 * @param  mixed $pagehook
+	 * @param  mixed $pagehook Page hook for the CPT archive settings page.
 	 * @return void
 	 */
 	public function __construct( $pagehook ) {
@@ -52,34 +63,14 @@ class Genesis_Portfolio_Archive_Settings {
 	 * @return void
 	 */
 	public function posts_per_page_metabox() {
-		echo $this->get_post_per_page_setting();
-	}
-
-	/**
-	 * Gets the posts per page setting HTML markup.
-	 *
-	 * @access public
-	 * @return string
-	 */
-	public function get_post_per_page_setting() {
 
 		$opts = (array) get_option( $this->settings_field );
 
-		$key = 'posts_per_page';
+		$label_attr = $this->settings_field . '-posts_per_page';
+		$name_attr  = $this->settings_field . '[posts_per_page]';
+		$value      = $opts['posts_per_page'] ?: get_option( 'posts_per_page' );
 
-		return sprintf(
-			'<table class="form-table"><tbody>
-				<tr valign="top">
-					<th scope="row"><label for="%1$s-%2$s"><b>%3$s</b></label></th>
-					<td><input name="%1$s[%2$s]" type="number" step="1" min="1" id="%1$s-%2$s" value="%5$s" class="small-text">%4$s</td>
-				</tr>
-			</tbody></table>',
-			$this->settings_field,
-			$key,
-			__( 'Archives show at most', 'genesis-portfolio-pro' ),
-			__( ' portfolio items', 'genesis-portfolio-pro' ),
-			empty( $opts[ $key ] ) ? get_option( 'posts_per_page' ) : $opts[ $key ]
-		);
+		include GENESIS_PORTFOLIO_VIEWS . '/admin/archive-settings/posts-per-page-meta.php';
 
 	}
 

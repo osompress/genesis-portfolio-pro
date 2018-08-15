@@ -103,8 +103,8 @@ class Genesis_Portfolio_Widget extends WP_Widget {
 	 */
 	public function update( $new_instance, $old_instance ) {
 
-		$new_instance['title']     = strip_tags( $new_instance['title'] );
-		$new_instance['more_text'] = strip_tags( $new_instance['more_text'] );
+		$new_instance['title']     = wp_strip_all_tags( $new_instance['title'] );
+		$new_instance['more_text'] = wp_strip_all_tags( $new_instance['more_text'] );
 		return $new_instance;
 
 	}

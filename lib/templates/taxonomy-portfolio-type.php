@@ -13,14 +13,15 @@ add_filter( 'genesis_site_layout', 'genesis_portfolio_taxonomy_template_layout' 
  * Force fullwidth content in the archive layout unless there is a specific taxonomy layout set.
  *
  * @access public
- * @param  string $layout
+ * @param  string $layout The current layout.
  * @return string
  */
 function genesis_portfolio_taxonomy_template_layout( $layout ) {
 	global $wp_query;
 
 	$term   = $wp_query->get_queried_object();
-	$layout = ( $term && isset( $term->term_id ) && $opt = get_term_meta( $term->term_id, 'layout', true ) ) ? $opt : __genesis_return_full_width_content();
+	$opt    = get_term_meta( $term->term_id, 'layout', true );
+	$layout = ( $term && isset( $term->term_id ) && $opt ) ? $opt : __genesis_return_full_width_content();
 
 	return $layout;
 }

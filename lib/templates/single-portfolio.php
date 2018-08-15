@@ -13,7 +13,7 @@ add_filter( 'genesis_site_layout', 'genesis_portfolio_single_template_layout' );
  * Force fullwidth content in the archive layout unless there is a specific portfolio item layout set.
  *
  * @access public
- * @param  string $layout
+ * @param  string $layout The current layout.
  * @return string
  */
 function genesis_portfolio_single_template_layout( $layout ) {

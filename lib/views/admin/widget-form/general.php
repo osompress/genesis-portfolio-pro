@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 </p>
 
 <p>
-	<label for="<?php echo $widget->get_field_id( 'portfolio_type' ); ?>"><?php esc_html_e( 'Portfolio Type', 'genesis-portfolio-pro' ); ?>:</label>
+	<label for="<?php echo esc_attr( $widget->get_field_id( 'portfolio_type' ) ); ?>"><?php esc_html_e( 'Portfolio Type', 'genesis-portfolio-pro' ); ?>:</label>
 	<?php
 	$portfolio_types = array(
 		'name'            => $widget->get_field_name( 'portfolio_type' ),
@@ -33,11 +33,11 @@ defined( 'ABSPATH' ) || exit;
 </p>
 
 <p>
-	<input id="<?php echo $widget->get_field_id( 'show_type' ); ?>"
+	<input id="<?php echo esc_attr( $widget->get_field_id( 'show_type' ) ); ?>"
 			type="checkbox"
 			name="<?php echo esc_attr( $widget->get_field_name( 'show_type' ) ); ?>"
 			value="1"<?php checked( $instance['show_type'] ); ?> />
-	<label for="<?php echo esc_attr( $widget->get_field_id( 'show_type' ) ); ?>"><?php _e( 'Show Portfolio Type', 'genesis-portfolio-pro' ); ?></label>
+	<label for="<?php echo esc_attr( $widget->get_field_id( 'show_type' ) ); ?>"><?php esc_html_e( 'Show Portfolio Type', 'genesis-portfolio-pro' ); ?></label>
 </p>
 
 <p>

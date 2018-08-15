@@ -11,15 +11,15 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <p>
-	<input id="<?php echo $widget->get_field_id( 'show_image' ); ?>"
+	<input id="<?php echo esc_attr( $widget->get_field_id( 'show_image' ) ); ?>"
 			type="checkbox"
 			name="<?php echo esc_attr( $widget->get_field_name( 'show_image' ) ); ?>"
 			value="1"<?php checked( $instance['show_image'] ); ?> />
-	<label for="<?php echo esc_attr( $widget->get_field_id( 'show_image' ) ); ?>"><?php _e( 'Show Featured Image', 'genesis-portfolio-pro' ); ?></label>
+	<label for="<?php echo esc_attr( $widget->get_field_id( 'show_image' ) ); ?>"><?php esc_html_e( 'Show Featured Image', 'genesis-portfolio-pro' ); ?></label>
 </p>
 
 <p>
-	<label for="<?php echo esc_attr( $widget->get_field_id( 'image_size' ) ); ?>"><?php _e( 'Image Size', 'genesis-portfolio-pro' ); ?>:</label>
+	<label for="<?php echo esc_attr( $widget->get_field_id( 'image_size' ) ); ?>"><?php esc_html_e( 'Image Size', 'genesis-portfolio-pro' ); ?>:</label>
 	<select id="<?php echo esc_attr( $widget->get_field_id( 'image_size' ) ); ?>"
 			class="genesis-image-size-selector"
 			name="<?php echo esc_attr( $widget->get_field_name( 'image_size' ) ); ?>">
@@ -34,12 +34,12 @@ defined( 'ABSPATH' ) || exit;
 </p>
 
 <p>
-	<label for="<?php echo esc_attr( $widget->get_field_id( 'image_alignment' ) ); ?>"><?php _e( 'Image Alignment', 'genesis-portfolio-pro' ); ?>:</label>
+	<label for="<?php echo esc_attr( $widget->get_field_id( 'image_alignment' ) ); ?>"><?php esc_html_e( 'Image Alignment', 'genesis-portfolio-pro' ); ?>:</label>
 	<select id="<?php echo esc_attr( $widget->get_field_id( 'image_alignment' ) ); ?>" name="<?php echo esc_attr( $widget->get_field_name( 'image_alignment' ) ); ?>">
-		<option value="alignnone">- <?php _e( 'None', 'genesis-portfolio-pro' ); ?> -</option>
-		<option value="alignleft" <?php selected( 'alignleft', $instance['image_alignment'] ); ?>><?php _e( 'Left', 'genesis-portfolio-pro' ); ?></option>
-		<option value="alignright" <?php selected( 'alignright', $instance['image_alignment'] ); ?>><?php _e( 'Right', 'genesis-portfolio-pro' ); ?></option>
-		<option value="aligncenter" <?php selected( 'aligncenter', $instance['image_alignment'] ); ?>><?php _e( 'Center', 'genesis-portfolio-pro' ); ?></option>
+		<option value="alignnone">- <?php esc_html_e( 'None', 'genesis-portfolio-pro' ); ?> -</option>
+		<option value="alignleft" <?php selected( 'alignleft', $instance['image_alignment'] ); ?>><?php esc_html_e( 'Left', 'genesis-portfolio-pro' ); ?></option>
+		<option value="alignright" <?php selected( 'alignright', $instance['image_alignment'] ); ?>><?php esc_html_e( 'Right', 'genesis-portfolio-pro' ); ?></option>
+		<option value="aligncenter" <?php selected( 'aligncenter', $instance['image_alignment'] ); ?>><?php esc_html_e( 'Center', 'genesis-portfolio-pro' ); ?></option>
 	</select>
 </p>
 

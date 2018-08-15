@@ -11,9 +11,9 @@ defined( 'ABSPATH' ) || exit;
 ?>
 
 <p>
-	<label for="<?php echo $widget->get_field_id( 'title' ); ?>"><?php _e( 'Title', 'genesis-portfolio-pro' ); ?>:</label>
+	<label for="<?php echo esc_attr( $widget->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'genesis-portfolio-pro' ); ?>:</label>
 	<input type="text"
-			id="<?php echo $widget->get_field_id( 'title' ); ?>"
+			id="<?php echo esc_attr( $widget->get_field_id( 'title' ) ); ?>"
 			name="<?php echo esc_attr( $widget->get_field_name( 'title' ) ); ?>"
 			value="<?php echo esc_attr( $instance['title'] ); ?>" class="widefat" />
 </p>
