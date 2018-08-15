@@ -12,7 +12,7 @@ defined( 'ABSPATH' ) || exit;
 
 <p>
 	<label for="<?php echo esc_attr( $widget->get_field_id( 'items_num' ) ); ?>"><?php esc_html_e( 'Number of Items to Show', 'genesis-portfolio-pro' ); ?>:</label>
-	<input type="text" id="<?php echo esc_attr( $widget->get_field_id( 'items_num' ) ); ?>" name="<?php echo esc_attr( $widget->get_field_name( 'items_num' ) ); ?>" value="<?php echo esc_attr( $instance['items_num'] ); ?>" size="2" placeholder="3" />
+	<input type="text" id="<?php echo esc_attr( $widget->get_field_id( 'items_num' ) ); ?>" name="<?php echo esc_attr( $widget->get_field_name( 'items_num' ) ); ?>" value="<?php echo esc_attr( $instance['items_num'] ); ?>" size="2" />
 </p>
 
 <p>
