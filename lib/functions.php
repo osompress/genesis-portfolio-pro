@@ -9,7 +9,6 @@
  * @return void
  */
 function genesis_portfolio_load_default_styles() {
-
 	/**
 	 * Allows disabling the default.css file.
 	 *
@@ -17,7 +16,8 @@ function genesis_portfolio_load_default_styles() {
 	 */
 	if ( apply_filters( 'genesis_portfolio_load_default_styles', true ) ) {
 
-		wp_register_style( 'genesis_portfolio',
+		wp_register_style(
+			'genesis_portfolio',
 			GENESIS_PORTFOLIO_URL . 'lib/default.css',
 			false,
 			'1.0.0'
@@ -31,8 +31,7 @@ function genesis_portfolio_load_default_styles() {
 /**
  * Remove actions on before entry and setup the portfolio entry actions
  */
-function genesis_portfolio_setup_loop(){
-
+function genesis_portfolio_setup_loop() {
 	$hooks = array(
 		'genesis_before_entry',
 		'genesis_entry_header',
@@ -47,10 +46,10 @@ function genesis_portfolio_setup_loop(){
 		remove_all_actions( $hook );
 	}
 
-	add_action( 'genesis_entry_content'      , 'genesis_portfolio_grid'                );
-	add_action( 'genesis_after_entry_content', 'genesis_entry_header_markup_open' , 5  );
+	add_action( 'genesis_entry_content', 'genesis_portfolio_grid' );
+	add_action( 'genesis_after_entry_content', 'genesis_entry_header_markup_open', 5 );
 	add_action( 'genesis_after_entry_content', 'genesis_entry_header_markup_close', 15 );
-	add_action( 'genesis_after_entry_content', 'genesis_do_post_title'                 );
+	add_action( 'genesis_after_entry_content', 'genesis_do_post_title' );
 
 }
 
@@ -63,7 +62,6 @@ function genesis_portfolio_setup_loop(){
  * @return array
  */
 function genesis_portfolio_add_body_class( $classes ) {
-
 	$classes[] = 'genesis-pro-portfolio';
 	return $classes;
 
@@ -78,7 +76,6 @@ function genesis_portfolio_add_body_class( $classes ) {
  * @return array
  */
 function genesis_portfolio_custom_post_class( $classes ) {
-
 	if ( is_main_query() ) {
 		$classes[] = 'pro-portfolio';
 	}
@@ -97,13 +94,17 @@ function genesis_portfolio_custom_post_class( $classes ) {
  * @return void
  */
 function genesis_portfolio_grid() {
-
-	$image = genesis_get_image( array(
+	$image = genesis_get_image(
+		array(
 			'format'  => 'html',
 			'size'    => 'portfolio',
 			'context' => 'archive',
-			'attr'    => array ( 'alt' => the_title_attribute( 'echo=0' ), 'class' => 'portfolio-image' ),
-		) );
+			'attr'    => array(
+				'alt'   => the_title_attribute( 'echo=0' ),
+				'class' => 'portfolio-image',
+			),
+		)
+	);
 
 	if ( $image ) {
 		printf( '<div class="portfolio-featured-image"><a href="%s" rel="bookmark">%s</a></div>', get_permalink(), $image );
