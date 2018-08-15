@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 	<label for="<?php echo esc_attr( $widget->get_field_id( 'show_content' ) ); ?>"><?php esc_html_e( 'Content Type', 'genesis-portfolio-pro' ); ?>:</label>
 	<select id="<?php echo esc_attr( $widget->get_field_id( 'show_content' ) ); ?>" name="<?php echo esc_attr( $widget->get_field_name( 'show_content' ) ); ?>">
 		<option value="" <?php selected( '', $instance['show_content'] ); ?>><?php esc_html_e( 'No Content', 'genesis-portfolio-pro' ); ?></option>
-		<option value="content" <?php selected( 'content', $instance['show_content'] ); ?>><?php esc_html_e( 'Show Content', 'genesis-portfolio-pro' ); ?></option>
+		<option value="content" <?php selected( 'content', $instance['show_content'] ); ?>><?php esc_html_e( 'Show All Content', 'genesis-portfolio-pro' ); ?></option>
 		<option value="excerpt" <?php selected( 'excerpt', $instance['show_content'] ); ?>><?php esc_html_e( 'Show Excerpt', 'genesis-portfolio-pro' ); ?></option>
 		<option value="content-limit" <?php selected( 'content-limit', $instance['show_content'] ); ?>><?php esc_html_e( 'Show Content Limit', 'genesis-portfolio-pro' ); ?></option>
 	</select>
