@@ -25,11 +25,19 @@ if ( ! empty( $instance['show_view_all'] ) && 'top' === $instance['view_all_posi
 
 $portfolio_query_args = array(
 	'post_type' => 'portfolio',
-	'cat'       => $instance['posts_cat'],
 	'showposts' => $instance['items_num'],
 	'orderby'   => $instance['orderby'],
 	'order'     => $instance['order'],
 );
+
+if ( ! empty( $instance['portfolio_type'] ) ) {
+	$portfolio_query_args['tax_query'] = array(
+		array(
+			'taxonomy' => 'portfolio-type',
+			'terms'    => $instance['portfolio_type'],
+		),
+	);
+}
 
 $wp_query = new WP_Query( $portfolio_query_args );
 
