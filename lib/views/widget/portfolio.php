@@ -79,7 +79,7 @@ if ( $portfolio_query->have_posts() ) {
 			printf( '<a href="%s" class="%s" %s>%s</a>', esc_url( get_permalink() ), esc_attr( $instance['image_alignment'] ), $role, wp_make_content_images_responsive( $image ) );
 		}
 
-		if ( $instance['show_title'] || $instance['show_byline'] ) {
+		if ( $instance['show_title'] ) {
 
 			$header = '';
 
