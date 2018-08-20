@@ -128,7 +128,7 @@ if ( $portfolio_query->have_posts() ) {
 				array(
 					'open'    => '<header %s>',
 					'close'   => '</header>',
-					'context' => 'portfolio-header',
+					'context' => 'entry-header',
 					'params'  => array(
 						'is_widget' => true,
 					),
