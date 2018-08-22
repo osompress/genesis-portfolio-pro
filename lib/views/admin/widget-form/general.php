@@ -19,14 +19,14 @@ defined( 'ABSPATH' ) || exit;
 	<label for="<?php echo esc_attr( $widget->get_field_id( 'portfolio_type' ) ); ?>"><?php esc_html_e( 'Portfolio Type', 'genesis-portfolio-pro' ); ?>:</label>
 	<?php
 	$portfolio_types = array(
-		'name'            => $widget->get_field_name( 'portfolio_type' ),
-		'id'              => $widget->get_field_id( 'portfolio_type' ),
-		'selected'        => $instance['portfolio_type'],
-		'orderby'         => 'name',
-		'hierarchical'    => 1,
-		'show_option_all' => __( 'All Types', 'genesis-portfolio-pro' ),
-		'hide_empty'      => '0',
-		'taxonomy'        => 'portfolio-type',
+		'name'             => $widget->get_field_name( 'portfolio_type' ),
+		'id'               => $widget->get_field_id( 'portfolio_type' ),
+		'selected'         => $instance['portfolio_type'],
+		'orderby'          => 'name',
+		'hierarchical'     => 1,
+		'show_option_none' => __( 'All Types', 'genesis-portfolio-pro' ),
+		'hide_empty'       => '0',
+		'taxonomy'         => 'portfolio-type',
 	);
 	wp_dropdown_categories( $portfolio_types );
 	?>

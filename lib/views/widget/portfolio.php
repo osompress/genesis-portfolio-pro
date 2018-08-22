@@ -32,7 +32,7 @@ $portfolio_query_args = array(
 	'order'     => $instance['order'],
 );
 
-if ( ! empty( $instance['portfolio_type'] ) ) {
+if ( ! empty( $instance['portfolio_type'] ) && $instance['portfolio_type'] > 0 ) {
 	// phpcs:ignore
 	$portfolio_query_args['tax_query'] = array(
 		array(
