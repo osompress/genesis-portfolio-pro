@@ -110,7 +110,12 @@ function genesis_portfolio_grid() {
 	) );
 
 	if ( $image ) {
-		printf( '<div class="portfolio-featured-image"><a href="%s" rel="bookmark">%s</a></div>', get_permalink(), $image );
+		genesis_markup( array(
+			'open'    => '<div class="portfolio-featured-image"><a href="' . get_permalink() . '" aria-hidden="true">',
+			'close'   => '</a></div>',
+			'content' => $image,
+			'context' => 'portfolio-pro',
+		) );
 	}
 
 }
