@@ -99,11 +99,15 @@ function genesis_portfolio_custom_post_class( $classes ) {
 function genesis_portfolio_grid() {
 
 	$image = genesis_get_image( array(
-			'format'  => 'html',
-			'size'    => 'portfolio',
-			'context' => 'archive',
-			'attr'    => array ( 'alt' => the_title_attribute( 'echo=0' ), 'class' => 'portfolio-image' ),
-		) );
+		'format'  => 'html',
+		'size'    => 'portfolio',
+		'context' => 'archive',
+		'attr'    => array(
+			'alt'      => the_title_attribute( 'echo=0' ),
+			'class'    => 'portfolio-image',
+			'itemprop' => 'image',
+		),
+	) );
 
 	if ( $image ) {
 		printf( '<div class="portfolio-featured-image"><a href="%s" rel="bookmark">%s</a></div>', get_permalink(), $image );
