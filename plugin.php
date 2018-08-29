@@ -223,6 +223,7 @@ add_filter( 'pre_get_posts', 'genesis_portfolio_archive_pre_get_posts', 999 );
 /**
  * Callback on the pre_get_posts hook.
  * Changes the posts per page setting for portfolio and portfolio-type archives if set.
+ * Sets ordering of archive pages to menu_order ascending, then post_date descending.
  *
  * @access public
  * @param  obj $query The query to adjust.
@@ -236,6 +237,11 @@ function genesis_portfolio_archive_pre_get_posts( $query ) {
 	if ( ! $query->is_post_type_archive( 'portfolio' ) && ! $query->is_tax( 'portfolio-type' ) ) {
 		return;
 	}
+
+	$query->set( 'orderby', array(
+		'menu_order' => 'ASC',
+		'post_date'  => 'DESC',
+	) );
 
 	$opts = (array) get_option( GENESIS_CPT_ARCHIVE_SETTINGS_FIELD_PREFIX . 'portfolio' );
 
