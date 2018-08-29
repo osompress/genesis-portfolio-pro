@@ -23,6 +23,21 @@ class Genesis_Portfolio_Archive_Settings {
 	public $settings_field;
 
 	/**
+	 * Builds the HTML output for the portfolio archive settings.
+	 *
+	 * @access public
+	 * @param  mixed $pagehook Page hook for the CPT archive settings page.
+	 * @return void
+	 */
+	public function __construct( $pagehook ) {
+
+		$this->settings_field = GENESIS_CPT_ARCHIVE_SETTINGS_FIELD_PREFIX . 'portfolio';
+
+		add_meta_box( 'post_per_page', __( 'Items Per Page', 'genesis-portfolio-pro' ), array( $this, 'posts_per_page_metabox' ), $pagehook, 'main', 'low' );
+
+	}
+
+	/**
 	 * Callback on the `genesis_cpt_archives_settings_metaboxes` action.
 	 * Checks to see if this is the correct page, then instantiates the object.
 	 *
@@ -37,21 +52,6 @@ class Genesis_Portfolio_Archive_Settings {
 		}
 
 		new static( $pagehook );
-
-	}
-
-	/**
-	 * Builds the HTML output for the portfolio archive settings.
-	 *
-	 * @access public
-	 * @param  mixed $pagehook Page hook for the CPT archive settings page.
-	 * @return void
-	 */
-	public function __construct( $pagehook ) {
-
-		$this->settings_field = GENESIS_CPT_ARCHIVE_SETTINGS_FIELD_PREFIX . 'portfolio';
-
-		add_meta_box( 'post_per_page', __( 'Items Per Page', 'genesis-portfolio-pro' ), array( $this, 'posts_per_page_metabox' ), $pagehook, 'main', 'low' );
 
 	}
 
