@@ -5,7 +5,7 @@
  * Description: Adds default portfolio to any Genesis HTML5 theme.
  * Version: 1.1
  * Author: StudioPress
- * Author URI: http://www.studiopress.com
+ * Author URI: https://www.studiopress.com
  * Text Domain: genesis-portfolio-pro
  * Domain Path: /languages
  *
