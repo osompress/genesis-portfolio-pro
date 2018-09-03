@@ -5,15 +5,15 @@ Requires at least: 4.4
 Tested up to: 4.8.3
 Stable tag: 1.1
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Genesis Portfolio Pro adds all you need to allow for styled portfolios for any Genesis HTML5 theme.
 
 == Description ==
 
-Genesis Portfolio Pro will add a new "Portfolio" post type where you can add portfolio entries with images and galleries to show of your visual content. 
+Genesis Portfolio Pro will add a new "Portfolio" post type where you can add portfolio entries with images and galleries to show of your visual content.
 
-The default template and styles will create a portfolio grid showing your featured images in a landscape format. These will link to a simple page where you can control the content including text, images, and even galleries.  
+The default template and styles will create a portfolio grid showing your featured images in a landscape format. These will link to a simple page where you can control the content including text, images, and even galleries.
 
 To get started click "add new" under the new "Portfolio" menu item to add your first Portfolio entry. Simply add your images and content just like you already know how to do with posts and publish. Add a few more entries to build your portfolio archive and show off your work in an attractive grid.
 
@@ -29,6 +29,11 @@ Custom templates are supported using the WordPress template hierarchy and the po
 
 
 == Changelog ==
+
+= 1.2 =
+* New: Genesis Portfolio widget.
+* New: You can now sort Portfolio archive items by menu order. Edit the menu order of each Portfolio item directly, or use a page ordering plugin.
+* Enhanced: image markup on the Portfolio archive is improved with `alt` and `itemprop` attributes.
 
 = 1.1 =
 * Added Feature items per page in portfolio archive settings

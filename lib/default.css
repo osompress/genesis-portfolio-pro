@@ -11,15 +11,15 @@
 }
 
 .genesis-pro-portfolio .pro-portfolio:nth-of-type(3n+1) {
-    clear: left;
+	clear: left;
 }
 
 .genesis-pro-portfolio .pro-portfolio:nth-of-type(3n+3) {
-    margin-right: 0;
+	margin-right: 0;
 }
 
 .genesis-pro-portfolio .archive-pagination {
-    clear: both;
+	clear: both;
 }
 
 .genesis-pro-portfolio .pro-portfolio .entry-header .entry-title {
@@ -56,52 +56,52 @@
 }
 
 .genesis-pro-portfolio .entry-header .entry-meta {
-    font-weight: normal;
-    font-size: 16px;
-    margin: 0;
-    padding: 5px;
-    text-transform: none;
+	font-weight: normal;
+	font-size: 16px;
+	margin: 0;
+	padding: 5px;
+	text-transform: none;
 }
 
 .genesis-pro-portfolio .content .entry-header .entry-meta .entry-comments-link {
-    display: block;
-    float: none;
-    margin-top: 5px;
-    padding-bottom: 0;
+	display: block;
+	float: none;
+	margin-top: 5px;
+	padding-bottom: 0;
 }
 
 .genesis-pro-portfolio .entry-author,
 .genesis-pro-portfolio .entry-comments-link,
 .genesis-pro-portfolio .entry-time {
-    border-width: 0;
-    float: none;
-    margin: 0;
-    width: auto;
+	border-width: 0;
+	float: none;
+	margin: 0;
+	width: auto;
 }
 
 .genesis-pro-portfolio .entry-author:before,
 .genesis-pro-portfolio .entry-comments-link:before,
 .entry-time:before {
-    content: "";
+	content: "";
 }
 
 .genesis-pro-portfolio .pro-portfolio .entry-header .entry-title {
-    margin: 20px 0 10px;
+	margin: 20px 0 10px;
 }
 
 .genesis-pro-portfolio .entry-header .entry-meta {
-    line-height: 1.6;
+	line-height: 1.6;
 }
 
 .genesis-pro-portfolio .entry-comments-link:before {
-    display: none;
+	display: none;
 }
 
 .genesis-pro-portfolio .content .entry-header .entry-meta .entry-comments-link a {
-    background-image: none;
-    display: block;
-    padding: 5px 8px;
-    position: static;
+	background-image: none;
+	display: block;
+	padding: 5px 8px;
+	position: static;
 }
 
 @media only screen and (max-width: 780px) {
