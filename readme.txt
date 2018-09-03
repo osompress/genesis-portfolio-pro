@@ -30,6 +30,11 @@ Custom templates are supported using the WordPress template hierarchy and the po
 
 == Changelog ==
 
+= 1.2 =
+* New: Genesis Portfolio widget.
+* New: You can now sort Portfolio archive items by menu order. Edit the menu order of each Portfolio item directly, or use a page ordering plugin.
+* Enhanced: image markup on the Portfolio archive is improved with `alt` and `itemprop` attributes.
+
 = 1.1 =
 * Added Feature items per page in portfolio archive settings
 * Fix layout setting for portfolio-type term
