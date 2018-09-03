@@ -100,13 +100,16 @@ function genesis_portfolio_custom_post_class( $classes ) {
  */
 function genesis_portfolio_grid() {
 
+	$image_id  = get_post_thumbnail_id();
+	$image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true );
+
 	$image = genesis_get_image(
 		array(
 			'format'  => 'html',
 			'size'    => 'portfolio',
 			'context' => 'archive',
 			'attr'    => array(
-				'alt'      => the_title_attribute( 'echo=0' ),
+				'alt'      => $image_alt,
 				'class'    => 'portfolio-image',
 				'itemprop' => 'image',
 			),
