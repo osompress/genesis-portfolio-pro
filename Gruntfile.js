@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         options: {
           patterns: [{
             match: /^.*Version:.*$/m,
-            replacement: 'Version: <%= pkg.version %>'
+            replacement: ' * Version: <%= pkg.version %>'
 
           }]
         },
