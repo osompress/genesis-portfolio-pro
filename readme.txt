@@ -1,5 +1,5 @@
 === Genesis Portfolio Pro ===
-Contributors: nathanrice, studiopress, wpmuguru, nick_thegeek, bgardner
+Contributors: nathanrice, studiopress, wpmuguru, nick_thegeek, bgardner, marksabbath, modernnerd
 Tags: genesis, portfolio, templates
 Requires at least: 4.4
 Tested up to: 4.9
