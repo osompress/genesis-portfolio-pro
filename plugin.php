@@ -3,7 +3,7 @@
  * Plugin Name: Genesis Portfolio Pro
  * Plugin URI: https://wordpress.org/plugins/genesis-portfolio-pro/
  * Description: Adds default portfolio to any Genesis HTML5 theme.
- * Version: 1.1
+ * Version: 1.2.0
  * Author: StudioPress
  * Author URI: https://www.studiopress.com
  * Text Domain: genesis-portfolio-pro

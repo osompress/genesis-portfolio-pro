@@ -3,7 +3,7 @@ Contributors: nathanrice, studiopress, wpmuguru, nick_thegeek, bgardner, marksab
 Tags: genesis, portfolio, templates
 Requires at least: 4.4
 Tested up to: 4.9
-Stable tag: 1.1
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,7 +30,7 @@ Custom templates are supported using the WordPress template hierarchy and the po
 
 == Changelog ==
 
-= 1.2 =
+= 1.2.0 =
 * New: Genesis Portfolio widget.
 * New: You can now sort Portfolio archive items by menu order. Edit the menu order of each Portfolio item directly, or use a page ordering plugin.
 * Enhanced: image markup on the Portfolio archive is improved with `alt` and `itemprop` attributes.
