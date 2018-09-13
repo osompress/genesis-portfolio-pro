@@ -104,7 +104,7 @@ if ( $portfolio_query->have_posts() ) {
 
 			if ( ! empty( $instance['show_title'] ) ) {
 
-				$title = get_the_title() ? get_the_title() : __( '(no title)', 'genesis' );
+				$title = get_the_title() ? get_the_title() : __( '(no title)', 'genesis-portfolio-pro' );
 
 				$heading = genesis_a11y( 'headings' ) ? 'h4' : 'h2';
 
