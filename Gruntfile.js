@@ -68,6 +68,36 @@ module.exports = function(grunt) {
       }
     },
 
+    // Check correct text domain is last argument of i18n functions.
+		checktextdomain: {
+			options: {
+				text_domain: '<%= pkg.name %>',
+				keywords: [
+					'__:1,2d',
+					'_e:1,2d',
+					'_x:1,2c,3d',
+					'_ex:1,2c,3d',
+					'_n:1,2,4d',
+					'_nx:1,2,4c,5d',
+					'_n_noop:1,2,3d',
+					'_nx_noop:1,2,3c,4d',
+					'esc_attr__:1,2d',
+					'esc_html__:1,2d',
+					'esc_attr_e:1,2d',
+					'esc_html_e:1,2d',
+					'esc_attr_x:1,2c,3d',
+					'esc_html_x:1,2c,3d'
+				]
+			},
+			files: {
+				expand: true,
+				src: [
+					'*.php',
+					'lib/**/*.php'
+				]
+			}
+		},
+
     // Check 'tested up to' headers against latest WordPress and WooCommerce.
     wptools: {
       test_wordpress: {
@@ -84,8 +114,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-replace');
   grunt.loadNpmTasks('grunt-contrib-compress');
+  grunt.loadNpmTasks('grunt-checktextdomain');
   grunt.loadNpmTasks('grunt-wptools');
 
   grunt.registerTask('default', ['phpcs']);
-  grunt.registerTask('build', ['wptools', 'replace:pluginfile', 'copy:main', 'compress:main'])
+  grunt.registerTask('build', ['checktextdomain', 'wptools', 'replace:pluginfile', 'copy:main', 'compress:main'])
 };
