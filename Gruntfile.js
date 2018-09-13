@@ -1,12 +1,12 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
-  pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON('package.json'),
     phpcs: {
       application: {
-          src: ['./*.php']
+        src: ['./*.php']
       },
       options: {
-          bin: 'vendor/bin/phpcs',
+        bin: 'vendor/bin/phpcs',
       }
     },
 
@@ -20,35 +20,35 @@ module.exports = function(grunt) {
           }]
         },
         files: [
-          { src: ['<%= pkg.main_plugin_file %>.php'], dest: './'}
-				]
+          { src: ['<%= pkg.main_plugin_file %>.php'], dest: './' }
+        ]
       }
     },
 
     // copying files to create the zip file
     copy: {
       // excluding not necessary files
-			main: {
-				src:  [
-				'**',
-				'!node_modules/**',
-				'!build/**',
-        '!vendor/**',
-				'!.git/**',
-        '!composer.json',
-        '!composer.lock',
-        '!package-lock.json',
-				'!Gruntfile.js',
-				'!package.json',
-				'!.gitignore',
-				'!.gitmodules',
-				'!**/Gruntfile.js',
-				'!**/package.json',
-        '!README.md',
-				'!**/*~'
-				],
-				dest: 'build/<%= pkg.name %>/'
-			},
+      main: {
+        src: [
+          '**',
+          '!node_modules/**',
+          '!build/**',
+          '!vendor/**',
+          '!.git/**',
+          '!composer.json',
+          '!composer.lock',
+          '!package-lock.json',
+          '!Gruntfile.js',
+          '!package.json',
+          '!.gitignore',
+          '!.gitmodules',
+          '!**/Gruntfile.js',
+          '!**/package.json',
+          '!README.md',
+          '!**/*~'
+        ],
+        dest: 'build/<%= pkg.name %>/'
+      },
     },
 
     // build zip file
@@ -69,34 +69,34 @@ module.exports = function(grunt) {
     },
 
     // Check correct text domain is last argument of i18n functions.
-		checktextdomain: {
-			options: {
-				text_domain: '<%= pkg.name %>',
-				keywords: [
-					'__:1,2d',
-					'_e:1,2d',
-					'_x:1,2c,3d',
-					'_ex:1,2c,3d',
-					'_n:1,2,4d',
-					'_nx:1,2,4c,5d',
-					'_n_noop:1,2,3d',
-					'_nx_noop:1,2,3c,4d',
-					'esc_attr__:1,2d',
-					'esc_html__:1,2d',
-					'esc_attr_e:1,2d',
-					'esc_html_e:1,2d',
-					'esc_attr_x:1,2c,3d',
-					'esc_html_x:1,2c,3d'
-				]
-			},
-			files: {
-				expand: true,
-				src: [
-					'*.php',
-					'lib/**/*.php'
-				]
-			}
-		},
+    checktextdomain: {
+      options: {
+        text_domain: '<%= pkg.name %>',
+        keywords: [
+          '__:1,2d',
+          '_e:1,2d',
+          '_x:1,2c,3d',
+          '_ex:1,2c,3d',
+          '_n:1,2,4d',
+          '_nx:1,2,4c,5d',
+          '_n_noop:1,2,3d',
+          '_nx_noop:1,2,3c,4d',
+          'esc_attr__:1,2d',
+          'esc_html__:1,2d',
+          'esc_attr_e:1,2d',
+          'esc_html_e:1,2d',
+          'esc_attr_x:1,2c,3d',
+          'esc_html_x:1,2c,3d'
+        ]
+      },
+      files: {
+        expand: true,
+        src: [
+          '*.php',
+          'lib/**/*.php'
+        ]
+      }
+    },
 
     // Check 'tested up to' headers against latest WordPress and WooCommerce.
     wptools: {
