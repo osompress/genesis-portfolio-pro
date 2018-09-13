@@ -1,0 +1,32 @@
+{
+  "name": "genesis-portfolio-pro",
+  "main_plugin_file": "plugin",
+  "title": "Genesis Portfolio Pro",
+  "version": "1.2.0",
+  "license": "GPL-2.0+",
+  "description": "Plugin that add a new Portfolio post type where you can add portfolio entries with images and galleries to show of your visual content.",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/copyblogger/genesis-portfolio-pro.git"
+  },
+  "author": "StudioPress",
+  "bugs": {
+    "url": "https://github.com/copyblogger/genesis-portfolio-pro/issues"
+  },
+  "homepage": "https://github.com/copyblogger/genesis-portfolio-pro#readme",
+  "dependencies": {
+    "to": "^0.2.9",
+    "update": "^0.7.4"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-checktextdomain": "^1.0.1",
+    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-phpcs": "^0.4.0",
+    "grunt-replace": "^1.0.1",
+    "grunt-wptools": "^0.1.0",
+    "npm": "^6.4.1"
+  }
+}
