@@ -11,7 +11,7 @@ Genesis Portfolio Pro adds all you need to allow for styled portfolios for any G
 
 == Description ==
 
-Genesis Portfolio Pro will add a new "Portfolio" post type where you can add portfolio entries with images and galleries to show of your visual content.
+Genesis Portfolio Pro will add a new "Portfolio" post type where you can add portfolio entries with images and galleries to show your visual content.
 
 The default template and styles will create a portfolio grid showing your featured images in a landscape format. These will link to a simple page where you can control the content including text, images, and even galleries.
 
