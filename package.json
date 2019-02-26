@@ -27,6 +27,6 @@
     "grunt-phpcs": "^0.4.0",
     "grunt-replace": "^1.0.1",
     "grunt-wptools": "^0.1.0",
-    "npm": "^6.4.1"
+    "npm": "^6.8.0"
   }
 }
