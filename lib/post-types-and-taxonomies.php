@@ -39,7 +39,10 @@ register_taxonomy(
 			'with_front' => false,
 		),
 		'show_ui'             => true,
-		'show_tagcloud'       => false,
+        'show_tagcloud'       => false,
+        'show_in_rest'        => true,
+        'rest_base'           => 'portfolio-type',
+        'rest_controller_class' => 'WP_REST_Terms_Controller',
 	)
 );
 
@@ -66,7 +69,8 @@ register_post_type(
 		'has_archive'  => true,
 		'hierarchical' => true,
 		'menu_icon'    => 'dashicons-format-gallery',
-		'public'       => true,
+        'public'       => true,
+        'show_in_rest' => true,
 		'rewrite'      => array(
 			'slug'       => _x( 'portfolio', 'portfolio slug', 'genesis-portfolio-pro' ),
 			'with_front' => false,
