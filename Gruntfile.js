@@ -10,21 +10,6 @@ module.exports = function (grunt) {
       }
     },
 
-    replace: {
-      pluginfile: {
-        options: {
-          patterns: [{
-            match: /^.*Version:.*$/m,
-            replacement: ' * Version: <%= pkg.version %>'
-
-          }]
-        },
-        files: [
-          { src: ['<%= pkg.main_plugin_file %>.php'], dest: './' }
-        ]
-      }
-    },
-
     // copying files to create the zip file
     copy: {
       // excluding not necessary files
@@ -112,7 +97,6 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-phpcs');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-replace');
   grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-checktextdomain');
   grunt.loadNpmTasks('grunt-wptools');
