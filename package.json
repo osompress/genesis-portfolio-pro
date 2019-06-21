@@ -8,19 +8,18 @@
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/copyblogger/genesis-portfolio-pro.git"
+    "url": "git+https://github.com/studiopress/genesis-portfolio-pro.git"
   },
   "author": "StudioPress",
   "bugs": {
-    "url": "https://github.com/copyblogger/genesis-portfolio-pro/issues"
+    "url": "https://github.com/studiopress/genesis-portfolio-pro/issues"
   },
-  "homepage": "https://github.com/copyblogger/genesis-portfolio-pro#readme",
+  "homepage": "https://github.com/studiopress/genesis-portfolio-pro#readme",
   "devDependencies": {
-    "grunt": "^1.0.3",
-    "grunt-checktextdomain": "^1.0.1",
-    "grunt-contrib-compress": "^1.4.3",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-phpcs": "^0.4.0",
-    "grunt-wptools": "^0.1.0"
+    "node-wp-i18n": "^1.2.3"
+  },
+  "scripts": {
+    "makepot": "wpi18n makepot --exclude=vendor,node_modules",
+    "addtextdomain": "wpi18n addtextdomain --exclude=vendor,node_modules"
   }
 }
