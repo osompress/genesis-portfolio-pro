@@ -1,4 +1,9 @@
 <?php
+/**
+ * Genesis Portfolio Pro
+ *
+ * @package genesis-portfolio-pro
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Sorry, you are not allowed to access this page directly.' );
@@ -37,7 +42,7 @@ function genesis_portfolio_autoload( $class ) {
 		'Genesis_Portfolio_Archive_Settings',
 		'Genesis_Portfolio_Widget',
 	);
- 	if ( in_array( $class, $classes, true ) ) {
+	if ( in_array( $class, $classes, true ) ) {
 		$name = strtolower( str_replace( '_', '-', $class ) );
 		include sprintf( '%s/classes/class-%s.php', GENESIS_PORTFOLIO_LIB, $name );
 	}
@@ -205,10 +210,13 @@ function genesis_portfolio_archive_pre_get_posts( $query ) {
 	if ( ! $query->is_post_type_archive( 'portfolio' ) && ! $query->is_tax( 'portfolio-type' ) ) {
 		return;
 	}
-	$query->set( 'orderby', array(
-		'menu_order' => 'ASC',
-		'post_date'  => 'DESC',
-	) );
+	$query->set(
+		'orderby',
+		array(
+			'menu_order' => 'ASC',
+			'post_date'  => 'DESC',
+		)
+	);
 	$opts = (array) get_option( GENESIS_CPT_ARCHIVE_SETTINGS_FIELD_PREFIX . 'portfolio' );
 	if ( empty( $opts['posts_per_page'] ) ) {
 		return;

@@ -1,12 +1,32 @@
 {
-    "require-dev": {
-        "squizlabs/php_codesniffer": "3.*",
-        "wp-coding-standards/wpcs": "^0.13.1",
-        "wimg/php-compatibility": "^8.0"
-    },
-    "scripts": {
-        "post-update-cmd": [
-            "./vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs/,vendor/wimg/php-compatibility/"
-        ]
-    }
+	"name": "studiopress/genesis-portfolio-pro",
+	"type": "wordpress-plugin",
+	"description": "This is a WordPress plugin designed to work on the Genesis theme framework. It adds a portfolio post type to Genesis child themes and provides HTML5 compatible template files with default CSS.",
+	"homepage": "https://github.com/studiopress/genesis-portfolio-pro",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": "^5.3 || ^7",
+		"composer/installers": "^1"
+	},
+	"require-dev": {
+		"php": "^5.6 || ^7",
+		"dealerdirect/phpcodesniffer-composer-installer": "*",
+		"squizlabs/php_codesniffer": "^3.3.1",
+		"phpcompatibility/phpcompatibility-wp": "*",
+		"wp-coding-standards/wpcs": "^1"
+	},
+	"config": {
+		"sort-order": true
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"scripts": {
+		"phpcs": "phpcs --standard=WordPress --ignore=vendor/,node_modules/,assets/ --extensions=php -p ./",
+		"phpcs-compat": "phpcs --extensions=php --standard=PHPCompatibilityWP --ignore=vendor/,node_modules/,assets/ --runtime-set testVersion 5.6- -p ./",
+		"phpcbf": "phpcbf --standard=WordPress --ignore=vendor/,node_modules/,assets/ --extensions=php -p ./"
+	},
+	"support": {
+		"issues": "https://github.com/studiopress/genesis-portfolio-pro/issues",
+		"source": "https://github.com/studiopress/genesis-portfolio-pro"
+	}
 }

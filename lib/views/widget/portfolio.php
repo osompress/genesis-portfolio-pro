@@ -66,7 +66,8 @@ if ( $portfolio_query->have_posts() ) {
 				'size'    => $instance['image_size'],
 				'context' => 'featured-post-widget',
 				'attr'    => genesis_parse_attr(
-					'entry-image-widget', array(
+					'entry-image-widget',
+					array(
 						'alt' => get_the_title(),
 					)
 				),
