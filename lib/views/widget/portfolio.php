@@ -75,9 +75,9 @@ if ( $portfolio_query->have_posts() ) {
 		);
 
 		if ( $image && $instance['show_image'] ) {
-			$role = empty( $instance['show_title'] ) ? '' : 'aria-hidden="true"';
+			$hidden = empty( $instance['show_title'] ) ? '' : 'aria-hidden="true"';
 			// phpcs:ignore
-			printf( '<a href="%s" class="%s" %s>%s</a>', esc_url( get_permalink() ), esc_attr( $instance['image_alignment'] ), $role, wp_make_content_images_responsive( $image ) );
+			printf( '<a href="%s" class="%s" %s>%s</a>', esc_url( get_permalink() ), esc_attr( $instance['image_alignment'] ), $hidden, wp_make_content_images_responsive( $image ) );
 		}
 
 		if ( $instance['show_title'] ) {
@@ -105,7 +105,7 @@ if ( $portfolio_query->have_posts() ) {
 
 			if ( ! empty( $instance['show_title'] ) ) {
 
-				$title = get_the_title() ? get_the_title() : __( '(no title)', 'genesis-portfolio-pro' );
+				$site_title = get_the_title() ? get_the_title() : __( '(no title)', 'genesis-portfolio-pro' );
 
 				$heading = genesis_a11y( 'headings' ) ? 'h4' : 'h2';
 
@@ -114,7 +114,7 @@ if ( $portfolio_query->have_posts() ) {
 						'open'    => "<{$heading} %s>",
 						'close'   => "</{$heading}>",
 						'context' => 'entry-title',
-						'content' => sprintf( '<a href="%s">%s</a>', get_permalink(), $title ),
+						'content' => sprintf( '<a href="%s">%s</a>', get_permalink(), $site_title ),
 						'params'  => array(
 							'is_widget' => true,
 							'wrap'      => $heading,
