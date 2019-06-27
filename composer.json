@@ -1,11 +1,11 @@
 {
 	"name": "studiopress/genesis-portfolio-pro",
 	"type": "wordpress-plugin",
-	"description": "This is a WordPress plugin designed to work on the Genesis theme framework. It adds a portfolio post type to Genesis child themes and provides HTML5 compatible template files with default CSS.",
+	"description": "Plugin that add a new Portfolio post type where you can add portfolio entries with images and galleries to show of your visual content.",
 	"homepage": "https://github.com/studiopress/genesis-portfolio-pro",
 	"license": "GPL-2.0-or-later",
 	"require": {
-		"php": "^5.3 || ^7",
+		"php": "^5.6 || ^7",
 		"composer/installers": "^1"
 	},
 	"require-dev": {
@@ -30,3 +30,4 @@
 		"source": "https://github.com/studiopress/genesis-portfolio-pro"
 	}
 }
+
