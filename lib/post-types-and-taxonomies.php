@@ -11,7 +11,8 @@
 
 // Registers "portfolio-type" taxonomy for the portfolio post type.
 register_taxonomy(
-	'portfolio-type', 'portfolio',
+	'portfolio-type',
+	'portfolio',
 	array(
 		'labels'              => array(
 			'name'                       => _x( 'Portfolio Types', 'taxonomy general name', 'genesis-portfolio-pro' ),
