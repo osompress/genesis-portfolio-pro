@@ -13,8 +13,7 @@
 		"dealerdirect/phpcodesniffer-composer-installer": "*",
 		"squizlabs/php_codesniffer": "^3.3.1",
 		"phpcompatibility/phpcompatibility-wp": "*",
-		"wp-coding-standards/wpcs": "^1",
-		"wp-cli/i18n-command": "^2.1"
+		"wp-coding-standards/wpcs": "^1"
 	},
 	"config": {
 		"sort-order": true
@@ -24,8 +23,7 @@
 	"scripts": {
 		"phpcs": "phpcs --standard=WordPress --ignore=vendor/,node_modules/,assets/ --extensions=php -p ./",
 		"phpcs-compat": "phpcs --extensions=php --standard=PHPCompatibilityWP --ignore=vendor/,node_modules/,assets/ --runtime-set testVersion 5.6- -p ./",
-		"phpcbf": "phpcbf --standard=WordPress --ignore=vendor/,node_modules/,assets/ --extensions=php -p ./",
-		"makepot": "wp i18n make-pot . --headers='{ \"Report-Msgid-Bugs-To\": \"StudioPress <translations@studiopress.com>\" }' --exclude=vendor/ --quiet"
+		"phpcbf": "phpcbf --standard=WordPress --ignore=vendor/,node_modules/,assets/ --extensions=php -p ./"
 	},
 	"support": {
 		"issues": "https://github.com/studiopress/genesis-portfolio-pro/issues",
