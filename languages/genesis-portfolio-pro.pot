@@ -2,10 +2,10 @@
 # This file is distributed under the same license as the Genesis Portfolio Pro package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Genesis Portfolio Pro 1.2.0\n"
+"Project-Id-Version: Genesis Portfolio Pro 1.2.1\n"
 "Report-Msgid-Bugs-To: "
 "https://wordpress.org/support/plugin/genesis-portfolio-pro\n"
-"POT-Creation-Date: 2019-06-20 14:55:38+00:00\n"
+"POT-Creation-Date: 2019-07-11 14:42:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,317 +14,253 @@ msgstr ""
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "X-Generator: node-wp-i18n 1.2.3\n"
 
-#: build/genesis-portfolio-pro/lib/classes/class-genesis-portfolio-archive-settings.php:36
 #: lib/classes/class-genesis-portfolio-archive-settings.php:36
 msgid "Items Per Page"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/classes/class-genesis-portfolio-widget.php:47
 #: lib/classes/class-genesis-portfolio-widget.php:47
 msgid "View More"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/classes/class-genesis-portfolio-widget.php:51
 #: lib/classes/class-genesis-portfolio-widget.php:51
 msgid "View All Items"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/classes/class-genesis-portfolio-widget.php:56
 #: lib/classes/class-genesis-portfolio-widget.php:56
 msgid "Displays one or more portfolio items."
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/classes/class-genesis-portfolio-widget.php:65
 #: lib/classes/class-genesis-portfolio-widget.php:65
 msgid "Genesis - Portfolio"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:19
-#: lib/post-types-and-taxonomies.php:19
+#: lib/post-types-and-taxonomies.php:20
 msgid "Search Portfolio Types"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:20
-#: lib/post-types-and-taxonomies.php:20
+#: lib/post-types-and-taxonomies.php:21
 msgid "Popular Portfolio Types"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:21
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:27
-#: lib/post-types-and-taxonomies.php:21
+#: lib/post-types-and-taxonomies.php:22
 #: lib/views/admin/widget-form/general.php:27
 msgid "All Types"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:22
-#: lib/post-types-and-taxonomies.php:22
+#: lib/post-types-and-taxonomies.php:23
 msgid "Edit Portfolio Type"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:23
-#: lib/post-types-and-taxonomies.php:23
+#: lib/post-types-and-taxonomies.php:24
 msgid "Update Portfolio Type"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:24
-#: lib/post-types-and-taxonomies.php:24
+#: lib/post-types-and-taxonomies.php:25
 msgid "Add New Portfolio Type"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:25
-#: lib/post-types-and-taxonomies.php:25
+#: lib/post-types-and-taxonomies.php:26
 msgid "New Portfolio Type Name"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:26
-#: lib/post-types-and-taxonomies.php:26
+#: lib/post-types-and-taxonomies.php:27
 msgid "Separate Portfolio Types with commas"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:27
-#: lib/post-types-and-taxonomies.php:27
+#: lib/post-types-and-taxonomies.php:28
 msgid "Add or remove Portfolio Types"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:28
-#: lib/post-types-and-taxonomies.php:28
+#: lib/post-types-and-taxonomies.php:29
 msgid "Choose from the most used Portfolio Types"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:29
-#: lib/post-types-and-taxonomies.php:29
+#: lib/post-types-and-taxonomies.php:30
 msgid "No Portfolio Types found."
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:30
-#: lib/post-types-and-taxonomies.php:30
+#: lib/post-types-and-taxonomies.php:31
 msgid "Portfolio Types"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:56
-#: lib/post-types-and-taxonomies.php:56
+#: lib/post-types-and-taxonomies.php:57
 msgid "Add New Portfolio Item"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:57
-#: lib/post-types-and-taxonomies.php:57
+#: lib/post-types-and-taxonomies.php:58
 msgid "New Portfolio Item"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:58
-#: lib/post-types-and-taxonomies.php:58
+#: lib/post-types-and-taxonomies.php:59
 msgid "Edit Portfolio Item"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:59
-#: lib/post-types-and-taxonomies.php:59
+#: lib/post-types-and-taxonomies.php:60
 msgid "View Portfolio Item"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:60
-#: lib/post-types-and-taxonomies.php:60
+#: lib/post-types-and-taxonomies.php:61
 msgid "All Portfolio Items"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:61
-#: lib/post-types-and-taxonomies.php:61
+#: lib/post-types-and-taxonomies.php:62
 msgid "Search Portfolio Items"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:62
-#: lib/post-types-and-taxonomies.php:62
+#: lib/post-types-and-taxonomies.php:63
 msgid "Parent Portfolio Items:"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:63
-#: lib/post-types-and-taxonomies.php:63
+#: lib/post-types-and-taxonomies.php:64
 msgid "No Portfolio Items found."
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:64
-#: lib/post-types-and-taxonomies.php:64
+#: lib/post-types-and-taxonomies.php:65
 msgid "No Portfolio Items found in Trash."
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/archive-settings/posts-per-page-meta.php:14
 #: lib/views/admin/archive-settings/posts-per-page-meta.php:14
 msgid "Archives show at most"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/archive-settings/posts-per-page-meta.php:21
 #: lib/views/admin/archive-settings/posts-per-page-meta.php:21
 msgid " portfolio items"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/featured-images.php:18
 #: lib/views/admin/widget-form/featured-images.php:18
 msgid "Show Featured Image"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/featured-images.php:22
 #: lib/views/admin/widget-form/featured-images.php:22
 msgid "Image Size"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/featured-images.php:36
 #: lib/views/admin/widget-form/featured-images.php:36
 msgid "Image Alignment"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/featured-images.php:38
 #: lib/views/admin/widget-form/featured-images.php:38
 msgid "None"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/featured-images.php:39
 #: lib/views/admin/widget-form/featured-images.php:39
 msgid "Left"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/featured-images.php:40
 #: lib/views/admin/widget-form/featured-images.php:40
 msgid "Right"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/featured-images.php:41
 #: lib/views/admin/widget-form/featured-images.php:41
 msgid "Center"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:14
 #: lib/views/admin/widget-form/general.php:14
 msgid "Number of Items to Show"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:19
 #: lib/views/admin/widget-form/general.php:19
 msgid "Portfolio Type"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:40
 #: lib/views/admin/widget-form/general.php:40
 msgid "Show Portfolio Type"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:44
 #: lib/views/admin/widget-form/general.php:44
 msgid "Order By"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:46
 #: lib/views/admin/widget-form/general.php:46
 msgid "Date Published"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:47
 #: lib/views/admin/widget-form/general.php:47
 msgid "Date Modified"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:48
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/widget-title.php:14
 #: lib/views/admin/widget-form/general.php:48
 #: lib/views/admin/widget-form/widget-title.php:14
 msgid "Title"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:49
 #: lib/views/admin/widget-form/general.php:49
 msgid "Menu Order"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:50
 #: lib/views/admin/widget-form/general.php:50
 msgid "Random"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:55
 #: lib/views/admin/widget-form/general.php:55
 msgid "Sort Order"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:57
 #: lib/views/admin/widget-form/general.php:57
 msgid "Descending (3, 2, 1)"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/general.php:58
 #: lib/views/admin/widget-form/general.php:58
 msgid "Ascending (1, 2, 3)"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/portfolio-title.php:15
 #: lib/views/admin/widget-form/portfolio-title.php:15
 msgid "Show Portfolio Item Title"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/portfolio-title.php:19
 #: lib/views/admin/widget-form/portfolio-title.php:19
 msgid "Content Type"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/portfolio-title.php:21
 #: lib/views/admin/widget-form/portfolio-title.php:21
 msgid "No Content"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/portfolio-title.php:22
 #: lib/views/admin/widget-form/portfolio-title.php:22
 msgid "Show All Content"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/portfolio-title.php:23
 #: lib/views/admin/widget-form/portfolio-title.php:23
 msgid "Show Excerpt"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/portfolio-title.php:24
 #: lib/views/admin/widget-form/portfolio-title.php:24
 msgid "Show Content Limit"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/portfolio-title.php:29
 #: lib/views/admin/widget-form/portfolio-title.php:29
 msgid "Limit content to"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/portfolio-title.php:31
 #: lib/views/admin/widget-form/portfolio-title.php:31
 msgid "characters"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/portfolio-title.php:36
 #: lib/views/admin/widget-form/portfolio-title.php:36
 msgid "More Text"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/view-all.php:15
 #: lib/views/admin/widget-form/view-all.php:15
 msgid "Show ‘View All’ Link"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/view-all.php:19
 #: lib/views/admin/widget-form/view-all.php:19
 msgid "Link position"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/view-all.php:21
 #: lib/views/admin/widget-form/view-all.php:21
 msgid "Bottom"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/view-all.php:22
 #: lib/views/admin/widget-form/view-all.php:22
 msgid "Top"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/admin/widget-form/view-all.php:26
 #: lib/views/admin/widget-form/view-all.php:26
 msgid "Link Text"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/views/widget/portfolio.php:107
-#: lib/views/widget/portfolio.php:107
+#: lib/views/widget/portfolio.php:108
 msgid "(no title)"
 msgstr ""
 
@@ -348,56 +284,47 @@ msgstr ""
 msgid "https://www.studiopress.com"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:17
-#: lib/post-types-and-taxonomies.php:17
+#: lib/post-types-and-taxonomies.php:18
 msgctxt "taxonomy general name"
 msgid "Portfolio Types"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:18
-#: lib/post-types-and-taxonomies.php:18
+#: lib/post-types-and-taxonomies.php:19
 msgctxt "taxonomy singular name"
 msgid "Portfolio Type"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:38
-#: lib/post-types-and-taxonomies.php:38
+#: lib/post-types-and-taxonomies.php:39
 msgctxt "portfolio-type slug"
 msgid "portfolio-type"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:51
-#: lib/post-types-and-taxonomies.php:51
+#: lib/post-types-and-taxonomies.php:52
 msgctxt "post type general name"
 msgid "Portfolio Items"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:52
-#: lib/post-types-and-taxonomies.php:52
+#: lib/post-types-and-taxonomies.php:53
 msgctxt "post type singular name"
 msgid "Portfolio Item"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:53
-#: lib/post-types-and-taxonomies.php:53
+#: lib/post-types-and-taxonomies.php:54
 msgctxt "admin menu"
 msgid "Portfolio Items"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:54
-#: lib/post-types-and-taxonomies.php:54
+#: lib/post-types-and-taxonomies.php:55
 msgctxt "add new on admin bar"
 msgid "Portfolio Item"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:55
-#: lib/post-types-and-taxonomies.php:55
+#: lib/post-types-and-taxonomies.php:56
 msgctxt "Portfolio Item"
 msgid "Add New"
 msgstr ""
 
-#: build/genesis-portfolio-pro/lib/post-types-and-taxonomies.php:71
-#: lib/post-types-and-taxonomies.php:71
+#: lib/post-types-and-taxonomies.php:72
 msgctxt "portfolio slug"
 msgid "portfolio"
 msgstr ""
