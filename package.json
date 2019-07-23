@@ -16,11 +16,8 @@
     "url": "https://github.com/studiopress/genesis-portfolio-pro/issues"
   },
   "homepage": "https://github.com/studiopress/genesis-portfolio-pro#readme",
-  "devDependencies": {
-    "node-wp-i18n": "^1.2.3"
-  },
+  "devDependencies": {},
   "scripts": {
-    "makepot": "wpi18n makepot --exclude=vendor,node_modules",
-    "addtextdomain": "wpi18n addtextdomain --exclude=vendor,node_modules"
+    "makepot": "composer makepot"
   }
 }
