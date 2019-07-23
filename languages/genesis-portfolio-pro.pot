@@ -1,0 +1,330 @@
+# Copyright (C) 2019 StudioPress
+# This file is distributed under the same license as the Genesis Portfolio Pro package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Genesis Portfolio Pro 1.2.1\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/genesis-portfolio-pro\n"
+"POT-Creation-Date: 2019-07-11 14:42:10+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: node-wp-i18n 1.2.3\n"
+
+#: lib/classes/class-genesis-portfolio-archive-settings.php:36
+msgid "Items Per Page"
+msgstr ""
+
+#: lib/classes/class-genesis-portfolio-widget.php:47
+msgid "View More"
+msgstr ""
+
+#: lib/classes/class-genesis-portfolio-widget.php:51
+msgid "View All Items"
+msgstr ""
+
+#: lib/classes/class-genesis-portfolio-widget.php:56
+msgid "Displays one or more portfolio items."
+msgstr ""
+
+#: lib/classes/class-genesis-portfolio-widget.php:65
+msgid "Genesis - Portfolio"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:20
+msgid "Search Portfolio Types"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:21
+msgid "Popular Portfolio Types"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:22
+#: lib/views/admin/widget-form/general.php:27
+msgid "All Types"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:23
+msgid "Edit Portfolio Type"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:24
+msgid "Update Portfolio Type"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:25
+msgid "Add New Portfolio Type"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:26
+msgid "New Portfolio Type Name"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:27
+msgid "Separate Portfolio Types with commas"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:28
+msgid "Add or remove Portfolio Types"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:29
+msgid "Choose from the most used Portfolio Types"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:30
+msgid "No Portfolio Types found."
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:31
+msgid "Portfolio Types"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:57
+msgid "Add New Portfolio Item"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:58
+msgid "New Portfolio Item"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:59
+msgid "Edit Portfolio Item"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:60
+msgid "View Portfolio Item"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:61
+msgid "All Portfolio Items"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:62
+msgid "Search Portfolio Items"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:63
+msgid "Parent Portfolio Items:"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:64
+msgid "No Portfolio Items found."
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:65
+msgid "No Portfolio Items found in Trash."
+msgstr ""
+
+#: lib/views/admin/archive-settings/posts-per-page-meta.php:14
+msgid "Archives show at most"
+msgstr ""
+
+#: lib/views/admin/archive-settings/posts-per-page-meta.php:21
+msgid " portfolio items"
+msgstr ""
+
+#: lib/views/admin/widget-form/featured-images.php:18
+msgid "Show Featured Image"
+msgstr ""
+
+#: lib/views/admin/widget-form/featured-images.php:22
+msgid "Image Size"
+msgstr ""
+
+#: lib/views/admin/widget-form/featured-images.php:36
+msgid "Image Alignment"
+msgstr ""
+
+#: lib/views/admin/widget-form/featured-images.php:38
+msgid "None"
+msgstr ""
+
+#: lib/views/admin/widget-form/featured-images.php:39
+msgid "Left"
+msgstr ""
+
+#: lib/views/admin/widget-form/featured-images.php:40
+msgid "Right"
+msgstr ""
+
+#: lib/views/admin/widget-form/featured-images.php:41
+msgid "Center"
+msgstr ""
+
+#: lib/views/admin/widget-form/general.php:14
+msgid "Number of Items to Show"
+msgstr ""
+
+#: lib/views/admin/widget-form/general.php:19
+msgid "Portfolio Type"
+msgstr ""
+
+#: lib/views/admin/widget-form/general.php:40
+msgid "Show Portfolio Type"
+msgstr ""
+
+#: lib/views/admin/widget-form/general.php:44
+msgid "Order By"
+msgstr ""
+
+#: lib/views/admin/widget-form/general.php:46
+msgid "Date Published"
+msgstr ""
+
+#: lib/views/admin/widget-form/general.php:47
+msgid "Date Modified"
+msgstr ""
+
+#: lib/views/admin/widget-form/general.php:48
+#: lib/views/admin/widget-form/widget-title.php:14
+msgid "Title"
+msgstr ""
+
+#: lib/views/admin/widget-form/general.php:49
+msgid "Menu Order"
+msgstr ""
+
+#: lib/views/admin/widget-form/general.php:50
+msgid "Random"
+msgstr ""
+
+#: lib/views/admin/widget-form/general.php:55
+msgid "Sort Order"
+msgstr ""
+
+#: lib/views/admin/widget-form/general.php:57
+msgid "Descending (3, 2, 1)"
+msgstr ""
+
+#: lib/views/admin/widget-form/general.php:58
+msgid "Ascending (1, 2, 3)"
+msgstr ""
+
+#: lib/views/admin/widget-form/portfolio-title.php:15
+msgid "Show Portfolio Item Title"
+msgstr ""
+
+#: lib/views/admin/widget-form/portfolio-title.php:19
+msgid "Content Type"
+msgstr ""
+
+#: lib/views/admin/widget-form/portfolio-title.php:21
+msgid "No Content"
+msgstr ""
+
+#: lib/views/admin/widget-form/portfolio-title.php:22
+msgid "Show All Content"
+msgstr ""
+
+#: lib/views/admin/widget-form/portfolio-title.php:23
+msgid "Show Excerpt"
+msgstr ""
+
+#: lib/views/admin/widget-form/portfolio-title.php:24
+msgid "Show Content Limit"
+msgstr ""
+
+#: lib/views/admin/widget-form/portfolio-title.php:29
+msgid "Limit content to"
+msgstr ""
+
+#: lib/views/admin/widget-form/portfolio-title.php:31
+msgid "characters"
+msgstr ""
+
+#: lib/views/admin/widget-form/portfolio-title.php:36
+msgid "More Text"
+msgstr ""
+
+#: lib/views/admin/widget-form/view-all.php:15
+msgid "Show ‘View All’ Link"
+msgstr ""
+
+#: lib/views/admin/widget-form/view-all.php:19
+msgid "Link position"
+msgstr ""
+
+#: lib/views/admin/widget-form/view-all.php:21
+msgid "Bottom"
+msgstr ""
+
+#: lib/views/admin/widget-form/view-all.php:22
+msgid "Top"
+msgstr ""
+
+#: lib/views/admin/widget-form/view-all.php:26
+msgid "Link Text"
+msgstr ""
+
+#: lib/views/widget/portfolio.php:108
+msgid "(no title)"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Genesis Portfolio Pro"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/genesis-portfolio-pro/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Adds default portfolio to any Genesis HTML5 theme."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "StudioPress"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.studiopress.com"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:18
+msgctxt "taxonomy general name"
+msgid "Portfolio Types"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:19
+msgctxt "taxonomy singular name"
+msgid "Portfolio Type"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:39
+msgctxt "portfolio-type slug"
+msgid "portfolio-type"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:52
+msgctxt "post type general name"
+msgid "Portfolio Items"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:53
+msgctxt "post type singular name"
+msgid "Portfolio Item"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:54
+msgctxt "admin menu"
+msgid "Portfolio Items"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:55
+msgctxt "add new on admin bar"
+msgid "Portfolio Item"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:56
+msgctxt "Portfolio Item"
+msgid "Add New"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:72
+msgctxt "portfolio slug"
+msgid "portfolio"
+msgstr ""
