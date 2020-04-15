@@ -3,7 +3,7 @@ Contributors: nathanrice, studiopress, wpmuguru, nick_thegeek, bgardner, marksab
 Tags: genesis, portfolio, templates
 Requires at least: 4.4
 Tested up to: 5.4
-Stable tag: 1.2.1
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,10 @@ Custom templates are supported using the WordPress template hierarchy and the po
 
 
 == Changelog ==
+
+= 1.2.2 =
+* REST: Expose the Portfolio post type and Portfolio Type taxonomy to the REST API.
+* Tooling: Generate language file with WP-CLI instead of Node.js.
 
 = 1.2.1 =
 * Conform to WordPress Development Standards for PHP
