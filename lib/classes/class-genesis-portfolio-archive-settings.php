@@ -68,7 +68,7 @@ class Genesis_Portfolio_Archive_Settings {
 
 		$label_attr = $this->settings_field . '-posts_per_page';
 		$name_attr  = $this->settings_field . '[posts_per_page]';
-		$value      = $opts['posts_per_page'] ?: get_option( 'posts_per_page' );
+		$value      = $opts['posts_per_page'] ?: get_option( 'posts_per_page' ); // phpcs:ignore WordPress.PHP.DisallowShortTernary
 
 		include GENESIS_PORTFOLIO_VIEWS . '/admin/archive-settings/posts-per-page-meta.php';
 
