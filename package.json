@@ -5,7 +5,7 @@
   "version": "1.2.1",
   "license": "GPL-2.0-or-later",
   "licenseuri": "https://www.gnu.org/licenses/gpl-2.0.html",
-  "description": "Plugin that add a new Portfolio post type where you can add portfolio entries with images and galleries to show of your visual content.",
+  "description": "Plugin that add a new Portfolio post type where you can add portfolio entries with images and galleries to show off your visual content.",
   "main": "Gruntfile.js",
   "repository": {
     "type": "git",

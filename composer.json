@@ -1,7 +1,7 @@
 {
 	"name": "studiopress/genesis-portfolio-pro",
 	"type": "wordpress-plugin",
-	"description": "Plugin that add a new Portfolio post type where you can add portfolio entries with images and galleries to show of your visual content.",
+	"description": "Plugin that add a new Portfolio post type where you can add portfolio entries with images and galleries to show off your visual content.",
 	"homepage": "https://github.com/studiopress/genesis-portfolio-pro",
 	"license": "GPL-2.0-or-later",
 	"require": {
