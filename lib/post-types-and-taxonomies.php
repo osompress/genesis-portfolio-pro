@@ -14,7 +14,7 @@ register_taxonomy(
 	'portfolio-type',
 	'portfolio',
 	array(
-		'labels'              => array(
+		'labels'                => array(
 			'name'                       => _x( 'Portfolio Types', 'taxonomy general name', 'genesis-portfolio-pro' ),
 			'singular_name'              => _x( 'Portfolio Type', 'taxonomy singular name', 'genesis-portfolio-pro' ),
 			'search_items'               => __( 'Search Portfolio Types', 'genesis-portfolio-pro' ),
@@ -32,15 +32,18 @@ register_taxonomy(
 			'parent_item'                => null,
 			'parent_item_colon'          => null,
 		),
-		'exclude_from_search' => true,
-		'has_archive'         => true,
-		'hierarchical'        => true,
-		'rewrite'             => array(
+		'exclude_from_search'   => true,
+		'has_archive'           => true,
+		'hierarchical'          => true,
+		'rewrite'               => array(
 			'slug'       => _x( 'portfolio-type', 'portfolio-type slug', 'genesis-portfolio-pro' ),
 			'with_front' => false,
 		),
-		'show_ui'             => true,
-		'show_tagcloud'       => false,
+		'show_ui'               => true,
+		'show_tagcloud'         => false,
+		'show_in_rest'          => true,
+		'rest_base'             => 'portfolio-type',
+		'rest_controller_class' => 'WP_REST_Terms_Controller',
 	)
 );
 
@@ -68,6 +71,7 @@ register_post_type(
 		'hierarchical' => true,
 		'menu_icon'    => 'dashicons-format-gallery',
 		'public'       => true,
+		'show_in_rest' => true,
 		'rewrite'      => array(
 			'slug'       => _x( 'portfolio', 'portfolio slug', 'genesis-portfolio-pro' ),
 			'with_front' => false,
