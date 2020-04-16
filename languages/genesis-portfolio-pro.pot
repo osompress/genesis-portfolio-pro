@@ -1,18 +1,38 @@
-# Copyright (C) 2019 StudioPress
-# This file is distributed under the same license as the Genesis Portfolio Pro package.
+# Copyright (C) 2020 StudioPress
+# This file is distributed under the same license as the Genesis Portfolio Pro plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Genesis Portfolio Pro 1.2.1\n"
-"Report-Msgid-Bugs-To: "
-"https://wordpress.org/support/plugin/genesis-portfolio-pro\n"
-"POT-Creation-Date: 2019-07-11 14:42:10+00:00\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Project-Id-Version: Genesis Portfolio Pro 1.2.2\n"
+"Report-Msgid-Bugs-To: StudioPress <translations@studiopress.com>\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: node-wp-i18n 1.2.3\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-15T16:59:10+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.2.0\n"
+"X-Domain: genesis-portfolio-pro\n"
+
+#. Plugin Name of the plugin
+msgid "Genesis Portfolio Pro"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://wordpress.org/plugins/genesis-portfolio-pro/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Adds default portfolio to any Genesis HTML5 theme."
+msgstr ""
+
+#. Author of the plugin
+msgid "StudioPress"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.studiopress.com"
+msgstr ""
 
 #: lib/classes/class-genesis-portfolio-archive-settings.php:36
 msgid "Items Per Page"
@@ -32,6 +52,16 @@ msgstr ""
 
 #: lib/classes/class-genesis-portfolio-widget.php:65
 msgid "Genesis - Portfolio"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:18
+msgctxt "taxonomy general name"
+msgid "Portfolio Types"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:19
+msgctxt "taxonomy singular name"
+msgid "Portfolio Type"
 msgstr ""
 
 #: lib/post-types-and-taxonomies.php:20
@@ -83,40 +113,75 @@ msgstr ""
 msgid "Portfolio Types"
 msgstr ""
 
+#: lib/post-types-and-taxonomies.php:39
+msgctxt "portfolio-type slug"
+msgid "portfolio-type"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:55
+msgctxt "post type general name"
+msgid "Portfolio Items"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:56
+msgctxt "post type singular name"
+msgid "Portfolio Item"
+msgstr ""
+
 #: lib/post-types-and-taxonomies.php:57
-msgid "Add New Portfolio Item"
+msgctxt "admin menu"
+msgid "Portfolio Items"
 msgstr ""
 
 #: lib/post-types-and-taxonomies.php:58
-msgid "New Portfolio Item"
+msgctxt "add new on admin bar"
+msgid "Portfolio Item"
 msgstr ""
 
 #: lib/post-types-and-taxonomies.php:59
-msgid "Edit Portfolio Item"
+msgctxt "Portfolio Item"
+msgid "Add New"
 msgstr ""
 
 #: lib/post-types-and-taxonomies.php:60
-msgid "View Portfolio Item"
+msgid "Add New Portfolio Item"
 msgstr ""
 
 #: lib/post-types-and-taxonomies.php:61
-msgid "All Portfolio Items"
+msgid "New Portfolio Item"
 msgstr ""
 
 #: lib/post-types-and-taxonomies.php:62
-msgid "Search Portfolio Items"
+msgid "Edit Portfolio Item"
 msgstr ""
 
 #: lib/post-types-and-taxonomies.php:63
-msgid "Parent Portfolio Items:"
+msgid "View Portfolio Item"
 msgstr ""
 
 #: lib/post-types-and-taxonomies.php:64
-msgid "No Portfolio Items found."
+msgid "All Portfolio Items"
 msgstr ""
 
 #: lib/post-types-and-taxonomies.php:65
+msgid "Search Portfolio Items"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:66
+msgid "Parent Portfolio Items:"
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:67
+msgid "No Portfolio Items found."
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:68
 msgid "No Portfolio Items found in Trash."
+msgstr ""
+
+#: lib/post-types-and-taxonomies.php:76
+msgctxt "portfolio slug"
+msgid "portfolio"
 msgstr ""
 
 #: lib/views/admin/archive-settings/posts-per-page-meta.php:14
@@ -262,69 +327,4 @@ msgstr ""
 
 #: lib/views/widget/portfolio.php:108
 msgid "(no title)"
-msgstr ""
-
-#. Plugin Name of the plugin/theme
-msgid "Genesis Portfolio Pro"
-msgstr ""
-
-#. Plugin URI of the plugin/theme
-msgid "https://wordpress.org/plugins/genesis-portfolio-pro/"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid "Adds default portfolio to any Genesis HTML5 theme."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "StudioPress"
-msgstr ""
-
-#. Author URI of the plugin/theme
-msgid "https://www.studiopress.com"
-msgstr ""
-
-#: lib/post-types-and-taxonomies.php:18
-msgctxt "taxonomy general name"
-msgid "Portfolio Types"
-msgstr ""
-
-#: lib/post-types-and-taxonomies.php:19
-msgctxt "taxonomy singular name"
-msgid "Portfolio Type"
-msgstr ""
-
-#: lib/post-types-and-taxonomies.php:39
-msgctxt "portfolio-type slug"
-msgid "portfolio-type"
-msgstr ""
-
-#: lib/post-types-and-taxonomies.php:52
-msgctxt "post type general name"
-msgid "Portfolio Items"
-msgstr ""
-
-#: lib/post-types-and-taxonomies.php:53
-msgctxt "post type singular name"
-msgid "Portfolio Item"
-msgstr ""
-
-#: lib/post-types-and-taxonomies.php:54
-msgctxt "admin menu"
-msgid "Portfolio Items"
-msgstr ""
-
-#: lib/post-types-and-taxonomies.php:55
-msgctxt "add new on admin bar"
-msgid "Portfolio Item"
-msgstr ""
-
-#: lib/post-types-and-taxonomies.php:56
-msgctxt "Portfolio Item"
-msgid "Add New"
-msgstr ""
-
-#: lib/post-types-and-taxonomies.php:72
-msgctxt "portfolio slug"
-msgid "portfolio"
 msgstr ""
