@@ -12,6 +12,8 @@
  * Version: 1.2.3
  * Author: StudioPress
  * Author URI: https://www.studiopress.com
+ * Requires at least: 4.4
+ * Requires PHP: 5.6
  * Text Domain: genesis-portfolio-pro
  * Domain Path: /languages
  */
