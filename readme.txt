@@ -30,6 +30,9 @@ Custom templates are supported using the WordPress template hierarchy and the po
 
 == Changelog ==
 
+= 1.2.3 =
+* Removed use of `wp_make_content_images_responsive` portfolio widget images; `srcset` is applied via `wp_calculate_image_srcset` in `wp_get_attachment_image` used by `genesis_get_image`.
+
 = 1.2.2 =
 * REST: Expose the Portfolio post type and Portfolio Type taxonomy to the REST API.
 * Tooling: Generate language file with WP-CLI instead of Node.js.
