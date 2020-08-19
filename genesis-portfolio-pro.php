@@ -138,7 +138,7 @@ function genesis_portfolio_archive_setting_defaults( $defaults = array(), $post_
 
 register_activation_hook( __FILE__, 'genesis_portfolio_rewrite_flush' );
 /**
- * Activation hook action to flush the rewrit rules for the custom post type and taxonomy
+ * Activation hook action to flush the rewrite rules for the custom post type and taxonomy
  *
  * @since 0.1.0
  */
