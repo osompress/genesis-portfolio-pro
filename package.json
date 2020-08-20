@@ -2,7 +2,7 @@
   "name": "genesis-portfolio-pro",
   "main_plugin_file": "plugin",
   "title": "Genesis Portfolio Pro",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "license": "GPL-2.0-or-later",
   "licenseuri": "https://www.gnu.org/licenses/gpl-2.0.html",
   "description": "Plugin that add a new Portfolio post type where you can add portfolio entries with images and galleries to show off your visual content.",
