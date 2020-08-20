@@ -77,7 +77,7 @@ if ( $portfolio_query->have_posts() ) {
 		if ( $image && $instance['show_image'] ) {
 			$state = empty( $instance['show_title'] ) ? '' : 'aria-hidden="true"';
 			// phpcs:ignore
-			printf( '<a href="%s" class="%s" %s>%s</a>', esc_url( get_permalink() ), esc_attr( $instance['image_alignment'] ), $state, wp_make_content_images_responsive( $image ) );
+			printf( '<a href="%s" class="%s" %s>%s</a>', esc_url( get_permalink() ), esc_attr( $instance['image_alignment'] ), $state, $image );
 		}
 
 		if ( $instance['show_title'] ) {
