@@ -62,11 +62,11 @@ commands:
 executors:
   base:
     docker:
-      - image: circleci/buildpack-deps:latest
+      - image: cimg/base:current
     working_directory: /tmp
   php_node:
     docker:
-      - image: circleci/php:7.3.3-stretch-node-browsers
+      - image: circleci/php:7.3-node
     working_directory: /tmp/src
 
 jobs:
