@@ -128,7 +128,7 @@ function genesis_portfolio_archive_setting_sanitization() {
  * @param  string $post_type The post type to filter settings for.
  * @return array
  */
-function genesis_portfolio_archive_setting_defaults( $defaults = array(), $post_type ) {
+function genesis_portfolio_archive_setting_defaults( $defaults, $post_type ) {
 	if ( 'portfolio' === $post_type ) {
 		$defaults                   = (array) $defaults;
 		$defaults['posts_per_page'] = get_option( 'posts_per_page' );
