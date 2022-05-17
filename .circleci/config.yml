@@ -76,20 +76,7 @@ jobs:
       - run:
           name: Testing SVN
           command: |
-            if [ ! $SVN_USERNAME ]
-              then
-              echo "There is no SVN_USERNAME environment variable. Please add a CircleCI context that has that variable: https://github.com/studiopress/wp-svn-orb/blob/develop/src/examples/example.yml#L26"
-              exit 1
-            fi
-            if [ ! $SVN_PASSWORD ]
-              then
-              echo "There is no SVN_PASSWORD environment variable. Please add a CircleCI context that has that variable: https://github.com/studiopress/wp-svn-orb/blob/develop/src/examples/example.yml#L26"
-              exit 1
-            fi
-
             CHECKOUT_PATH=/tmp/src
-            sudo apt-get update
-            sudo apt-get install subversion
 
             SLUG=$CIRCLE_PROJECT_REPONAME
             if [ ! $SLUG ]
