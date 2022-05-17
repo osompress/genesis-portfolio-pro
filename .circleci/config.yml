@@ -107,6 +107,8 @@ jobs:
             svn up tags/${VERSION}
             echo "The tested up to version is: $TESTED_UP_TO_VERSION"
             echo "The version is: $VERSION"
+            echo "And here is the sed file:"
+            ls tags/${VERSION}/readme.txt
             sed -i "s/tested up to: .*/Tested up to: ${TESTED_UP_TO_VERSION}/i" trunk/readme.txt tags/${VERSION}/readme.txt
             echo "Here is the svn stat about to be checked in:"
             svn stat
