@@ -77,6 +77,8 @@ jobs:
           name: Testing SVN
           command: |
             CHECKOUT_PATH=/tmp/src
+            sudo apt-get update
+            sudo apt-get install subversion
 
             SLUG=$CIRCLE_PROJECT_REPONAME
             if [ ! $SLUG ]
