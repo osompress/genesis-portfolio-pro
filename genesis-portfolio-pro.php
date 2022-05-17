@@ -2,6 +2,8 @@
 /**
  * Genesis Portfolio Pro
  *
+ * Version: 1.2.3
+ *
  * @package genesis-portfolio-pro
  */
 
