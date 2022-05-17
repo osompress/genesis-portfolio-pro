@@ -1,8 +1,5 @@
 version: 2.1
 
-orbs:
-  wp-svn: studiopress/wp-svn@0.1
-
 commands:
   install_dependencies:
     description: "Install development dependencies."
