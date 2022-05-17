@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs:
+  wp-svn: studiopress/wp-svn@0.1
+
 commands:
   install_dependencies:
     description: "Install development dependencies."
@@ -63,59 +66,125 @@ executors:
     working_directory: /tmp
   php_node:
     docker:
-      - image: cimg/php:7.3-node
+      - image: circleci/php:7.3-node
     working_directory: /tmp/src
 
 jobs:
-  test-svn:
-    docker:
-      - image: cimg/base:current
+  checkout:
+    executor: base
     steps:
+      - mkdir_artifacts
       - checkout:
-          path: /tmp/src
-      - run:
-          name: Testing SVN
-          command: |
-            CHECKOUT_PATH=/tmp/src
-            sudo apt-get update
-            sudo apt-get install subversion
+          path: src
+      - persist_to_workspace:
+          root: /tmp
+          paths:
+            - src
 
-            SLUG=$CIRCLE_PROJECT_REPONAME
-            if [ ! $SLUG ]
-              then
-              echo "Didn't find the plugin slug from the repo name"
-              exit 1
-            fi
+  checks:
+    executor: php_node
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - install_dependencies
+      - run: composer phpcs
 
-            VERSION=$(grep -i 'Version:' $CHECKOUT_PATH/*.php | awk -F: '{print $(NF)}' | sed 's/^\s//')
-            if [ ! $VERSION ] || [ 'Version' = $VERSION ]
-              then
-              echo "Didn't find a version of the plugin"
-              exit 1
-            fi
+  deploy_svn_branch:
+    executor: base
+    working_directory: /tmp/artifacts
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - svn_setup
+      - svn_add_changes
+      - svn_commit
 
-            TESTED_UP_TO_VERSION=$(grep -i 'tested up to:' $CHECKOUT_PATH/readme.txt | awk -F: '{print $2}' | sed 's/^\s//')
-            if [ ! $TESTED_UP_TO_VERSION ]
-              then
-              echo "Didn't find a 'Tested up to' version, so can't bump it"
-              exit 1
-            fi
-
-            svn co https://plugins.svn.wordpress.org/${SLUG} --depth=empty .
-            svn up trunk
-            svn up tags --depth=empty
-            svn up tags/${VERSION}
-            echo "The tested up to version is: $TESTED_UP_TO_VERSION"
-            echo "The version is: $VERSION"
-            echo "And here is the sed file:"
-            ls tags/${VERSION}/readme.txt
-            sed -i "s/tested up to: .*/Tested up to: ${TESTED_UP_TO_VERSION}/i" trunk/readme.txt tags/${VERSION}/readme.txt
-            echo "Here is the svn stat about to be checked in:"
-            svn stat
-            echo "And here is the diff:"
-            svn diff
+  deploy_svn_tag:
+    executor: base
+    working_directory: /tmp/artifacts
+    steps:
+      - attach_workspace:
+          at: /tmp
+      - svn_setup
+      - svn_create_tag
+      - svn_add_changes
+      - svn_commit
 
 workflows:
+  version: 2
   test-deploy:
     jobs:
-      - test-svn
+      - checkout:
+          filters:
+            branches:
+              ignore:
+                - master
+      - checks:
+          requires:
+            - checkout
+          filters:
+            branches:
+              ignore:
+                - master
+      - approval-for-deploy-tested-up-to-bump:
+          type: approval
+          requires:
+            - checks
+          filters:
+            tags:
+              ignore: /.*/
+            branches:
+              only: /^bump-tested-up-to.*/
+      - wp-svn/deploy-tested-up-to-bump:
+          context: genesis-svn
+          requires:
+            - approval-for-deploy-tested-up-to-bump
+
+  branch_deploy:
+    jobs:
+      - checkout:
+          filters:
+            branches:
+              only:
+                - master
+      - checks:
+          requires:
+            - checkout
+          filters:
+            branches:
+              only:
+                - master
+      - deploy_svn_branch:
+          context: genesis-svn
+          requires:
+            - checks
+          filters:
+            branches:
+              only:
+                - master
+
+  tag_deploy:
+    jobs:
+      - checkout:
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+            branches:
+              ignore: /.*/
+      - checks:
+          requires:
+            - checkout
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+            branches:
+              ignore: /.*/
+      - deploy_svn_tag:
+          context: genesis-svn
+          requires:
+            - checks
+          filters:
+            tags:
+              only: /^\d+\.\d+\.\d+$/
+            branches:
+              ignore: /.*/
