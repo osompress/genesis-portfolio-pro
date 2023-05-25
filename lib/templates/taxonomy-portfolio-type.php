@@ -2,7 +2,7 @@
 /**
  * The portfolio type taxonomy archive template.
  *
- * @author     StudioPress
+ * @author     OsomPress
  * @package    Genesis Portfolio Pro
  * @subpackage Customizations
  */

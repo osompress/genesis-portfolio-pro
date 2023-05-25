@@ -2,7 +2,7 @@
 /**
  * Global `genesis_portfolio_` functions.
  *
- * @author     StudioPress
+ * @author     OsomPress
  * @package    Genesis Portfolio Pro
  */
 

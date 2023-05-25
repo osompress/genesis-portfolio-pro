@@ -5,7 +5,7 @@
  * Registers and Formats post types and taxonomies
  *
  * @package Genesis Portfolio Pro
- * @author  StudioPress
+ * @author  OsomPress
  * @license GPL-2.0+
  */
 

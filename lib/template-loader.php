@@ -5,7 +5,7 @@
  * Conditionally Loads Portfolio template files from child theme or plugin
  *
  * @package Genesis Portfolio Pro
- * @author  StudioPress
+ * @author  OsomPress
  * @license GPL-2.0+
  */
 

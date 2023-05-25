@@ -2,7 +2,7 @@
 /**
  * The Portfolio Widget.
  *
- * @author  StudioPress
+ * @author  OsomPress
  * @package Genesis Portfolio Pro
  * @since   1.2.0
  */

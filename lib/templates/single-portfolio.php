@@ -2,7 +2,7 @@
 /**
  * The custom portfolio post type single post template.
  *
- * @author     StudioPress
+ * @author     OsomPress
  * @package    Executive Pro
  * @subpackage Customizations
  */

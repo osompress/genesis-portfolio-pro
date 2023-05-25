@@ -2,7 +2,7 @@
 /**
  * The Portfolio Archive Settings.
  *
- * @author  StudioPress
+ * @author  OsomPress
  * @package Genesis Portfolio Pro
  * @since   1.2.0
  */
@@ -10,7 +10,7 @@
 /**
  * Portfolio Archive Settings.
  *
- * @author     StudioPress
+ * @author     OsomPress
  * @package    Genesis Portfolio Pro
  */
 class Genesis_Portfolio_Archive_Settings {

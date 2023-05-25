@@ -1,10 +1,10 @@
 === Genesis Portfolio Pro ===
-Contributors: nathanrice, studiopress, wpmuguru, nick_thegeek, bgardner, marksabbath, modernnerd, dreamwhisper, wpengine
+Contributors: nathanrice, studiopress, wpmuguru, nick_thegeek, bgardner, marksabbath, modernnerd, dreamwhisper, wpengine, osompress, esther_sola, nahuai
 Tags: genesis, portfolio, templates
 Requires at least: 4.4
 Tested up to: 6.2
 Requires PHP: 5.6
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,9 @@ Custom templates are supported using the WordPress template hierarchy and the po
 
 
 == Changelog ==
+
+= 1.2.4 =
+* Changed ownership from StudioPress to OsomPress. You can read more details about it in https://osompress.com/4-new-plugins-join-osompress-family/.
 
 = 1.2.3 =
 * Removed use of `wp_make_content_images_responsive` portfolio widget images; `srcset` is applied via `wp_calculate_image_srcset` in `wp_get_attachment_image` used by `genesis_get_image`.
