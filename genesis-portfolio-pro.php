@@ -27,6 +27,17 @@ function genesis_portfolio_load_plugin_textdomain() {
 define( 'GENESIS_PORTFOLIO_LIB', dirname( __FILE__ ) . '/lib/' );
 define( 'GENESIS_PORTFOLIO_URL', plugins_url( '/', __FILE__ ) );
 define( 'GENESIS_PORTFOLIO_VIEWS', GENESIS_PORTFOLIO_LIB . 'views/' );
+ 
+
+function is_genesis_theme() {
+	$theme = wp_get_theme();
+	if ($theme->parent() && $theme->parent()->get('Name') === 'Genesis') {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 
 spl_autoload_register( 'genesis_portfolio_autoload' );
 /**
@@ -48,6 +59,22 @@ function genesis_portfolio_autoload( $class ) {
 	}
 }
 
+
+add_action( 'init', 'portfolio_init' );
+
+function portfolio_init() {
+	include_once GENESIS_PORTFOLIO_LIB . 'post-types-and-taxonomies.php';
+	if ( is_admin() ) {
+		add_action( 'admin_enqueue_scripts', 'genesis_portfolio_load_admin_styles' );
+	} else {
+		if(is_genesis_theme()) {
+		include_once GENESIS_PORTFOLIO_LIB . 'template-loader.php';
+		}
+	}
+
+}
+
+
 add_action( 'genesis_init', 'genesis_portfolio_init' );
 /**
  * Init action loads required files and other actions.
@@ -58,12 +85,7 @@ add_action( 'genesis_init', 'genesis_portfolio_init' );
  * @uses GENESIS_PORTFOLIO_LIB
  */
 function genesis_portfolio_init() {
-	include_once GENESIS_PORTFOLIO_LIB . 'post-types-and-taxonomies.php';
-	if ( is_admin() ) {
-		add_action( 'admin_enqueue_scripts', 'genesis_portfolio_load_admin_styles' );
-	} else {
-		include_once GENESIS_PORTFOLIO_LIB . 'template-loader.php';
-	}
+	
 	// Archive settings.
 	add_action( 'genesis_cpt_archives_settings_metaboxes', array( 'Genesis_Portfolio_Archive_Settings', 'register_metaboxes' ) );
 	add_action( 'genesis_settings_sanitizer_init', 'genesis_portfolio_archive_setting_sanitization' );
@@ -217,9 +239,13 @@ function genesis_portfolio_archive_pre_get_posts( $query ) {
 			'post_date'  => 'DESC',
 		)
 	);
-	$opts = (array) get_option( GENESIS_CPT_ARCHIVE_SETTINGS_FIELD_PREFIX . 'portfolio' );
-	if ( empty( $opts['posts_per_page'] ) ) {
-		return;
+
+	if(is_genesis_theme()){
+		$opts = (array) get_option( GENESIS_CPT_ARCHIVE_SETTINGS_FIELD_PREFIX . 'portfolio' );
+		if ( empty( $opts['posts_per_page'] ) ) {
+			return;
+		}
+		$query->set( 'posts_per_page', intval( $opts['posts_per_page'] ) );
 	}
-	$query->set( 'posts_per_page', intval( $opts['posts_per_page'] ) );
+	 
 }
