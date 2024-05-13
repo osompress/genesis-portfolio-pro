@@ -8,7 +8,7 @@ Stable tag: 1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Genesis Portfolio Pro adds all you need to allow for styled portfolios for any Genesis HTML5 theme.
+Genesis Portfolio Pro adds all you need to allow for styled portfolios for any WordPress theme.
 
 == Description ==
 
