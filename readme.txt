@@ -2,9 +2,9 @@
 Contributors: nathanrice, studiopress, wpmuguru, nick_thegeek, bgardner, marksabbath, modernnerd, dreamwhisper, wpengine, osompress, esther_sola, nahuai
 Tags: genesis, portfolio, templates
 Requires at least: 4.4
-Tested up to: 6.4
+Tested up to: 6.5
 Requires PHP: 5.6
-Stable tag: 1.2.4
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,6 +30,9 @@ Custom templates are supported using the WordPress template hierarchy and the po
 
 
 == Changelog ==
+
+= 1.3 =
+* You can use now the plugin with other themes, not only Genesis child themes.
 
 = 1.2.4 =
 * Changed ownership from StudioPress to OsomPress. You can read more details about it in https://osompress.com/4-new-plugins-join-osompress-family/.

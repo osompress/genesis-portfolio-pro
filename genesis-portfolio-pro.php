@@ -26,8 +26,7 @@ function genesis_portfolio_load_plugin_textdomain() {
 
 define( 'GENESIS_PORTFOLIO_LIB', dirname( __FILE__ ) . '/lib/' );
 define( 'GENESIS_PORTFOLIO_URL', plugins_url( '/', __FILE__ ) );
-define( 'GENESIS_PORTFOLIO_VIEWS', GENESIS_PORTFOLIO_LIB . 'views/' );
- 
+define( 'GENESIS_PORTFOLIO_VIEWS', GENESIS_PORTFOLIO_LIB . 'views/' ); 
 
 function is_genesis_theme() {
 	$theme = wp_get_theme();
@@ -37,7 +36,6 @@ function is_genesis_theme() {
 		return false;
 	}
 }
-
 
 spl_autoload_register( 'genesis_portfolio_autoload' );
 /**
@@ -61,7 +59,6 @@ function genesis_portfolio_autoload( $class ) {
 
 
 add_action( 'init', 'portfolio_init' );
-
 function portfolio_init() {
 	include_once GENESIS_PORTFOLIO_LIB . 'post-types-and-taxonomies.php';
 	if ( is_admin() ) {
@@ -73,7 +70,6 @@ function portfolio_init() {
 	}
 
 }
-
 
 add_action( 'genesis_init', 'genesis_portfolio_init' );
 /**
@@ -90,7 +86,6 @@ function genesis_portfolio_init() {
 	add_action( 'genesis_cpt_archives_settings_metaboxes', array( 'Genesis_Portfolio_Archive_Settings', 'register_metaboxes' ) );
 	add_action( 'genesis_settings_sanitizer_init', 'genesis_portfolio_archive_setting_sanitization' );
 	add_action( 'genesis_cpt_archive_settings_defaults', 'genesis_portfolio_archive_setting_defaults', 10, 2 );
-	add_action( 'after_setup_theme', 'genesis_portfolio_after_setup_theme' );
 	add_action( 'widgets_init', 'genesis_portfolio_widgets_init' );
 }
 
@@ -109,18 +104,6 @@ function genesis_portfolio_load_admin_styles() {
 		'1.0.0'
 	);
 	wp_enqueue_style( 'genesis_portfolio_pro_admin_css' );
-}
-
-/**
- * Adds new portfolio image size if not already set in child theme
- *
- * @since 0.1.0
- */
-function genesis_portfolio_after_setup_theme() {
-	global $_wp_additional_image_sizes;
-	if ( ! isset( $_wp_additional_image_sizes['portfolio'] ) ) {
-		add_image_size( 'portfolio', 300, 200, true );
-	}
 }
 
 /**
@@ -247,5 +230,18 @@ function genesis_portfolio_archive_pre_get_posts( $query ) {
 		}
 		$query->set( 'posts_per_page', intval( $opts['posts_per_page'] ) );
 	}
-	 
+
+}
+
+add_action( 'after_setup_theme', 'genesis_portfolio_after_setup_theme' );
+/**
+ * Adds new portfolio image size if not already set in child theme
+ *
+ * @since 0.1.0
+ */
+function genesis_portfolio_after_setup_theme() {
+	global $_wp_additional_image_sizes;
+	if ( ! isset( $_wp_additional_image_sizes['portfolio'] ) ) {
+		add_image_size( 'portfolio', 300, 200, true );
+	}
 }
