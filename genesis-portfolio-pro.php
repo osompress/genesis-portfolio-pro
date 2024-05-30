@@ -28,14 +28,6 @@ define( 'GENESIS_PORTFOLIO_LIB', dirname( __FILE__ ) . '/lib/' );
 define( 'GENESIS_PORTFOLIO_URL', plugins_url( '/', __FILE__ ) );
 define( 'GENESIS_PORTFOLIO_VIEWS', GENESIS_PORTFOLIO_LIB . 'views/' ); 
 
-function is_genesis_theme() {
-	$theme = wp_get_theme();
-	if ($theme->parent() && $theme->parent()->get('Name') === 'Genesis') {
-		return true;
-	} else {
-		return false;
-	}
-}
 
 spl_autoload_register( 'genesis_portfolio_autoload' );
 /**
@@ -64,7 +56,8 @@ function portfolio_init() {
 	if ( is_admin() ) {
 		add_action( 'admin_enqueue_scripts', 'genesis_portfolio_load_admin_styles' );
 	} else {
-		if(is_genesis_theme()) {
+		$parent_theme = wp_get_theme()->parent();
+		if ( !$parent_theme || 'Genesis' !== $parent_theme->get( 'Name' ) ) {
 		include_once GENESIS_PORTFOLIO_LIB . 'template-loader.php';
 		}
 	}
@@ -223,7 +216,8 @@ function genesis_portfolio_archive_pre_get_posts( $query ) {
 		)
 	);
 
-	if(is_genesis_theme()){
+	$parent_theme = wp_get_theme()->parent();
+	if ( !$parent_theme || 'Genesis' !== $parent_theme->get( 'Name' ) ) {
 		$opts = (array) get_option( GENESIS_CPT_ARCHIVE_SETTINGS_FIELD_PREFIX . 'portfolio' );
 		if ( empty( $opts['posts_per_page'] ) ) {
 			return;
